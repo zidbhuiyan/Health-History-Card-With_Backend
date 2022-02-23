@@ -23,12 +23,12 @@ function Cards(props) {
           <ul className='cards__items'>
             
             <CardItem
-              src='https://ichef.bbci.co.uk/news/976/cpsprodpb/CAF2/production/_122945915_gettyimages-1291715271.jpg'
+              src='https://scx2.b-cdn.net/gfx/news/2020/studyfindsme.jpg'
               text='Login as Report staff'
               path='/login_form'
             />
             <CardItem
-              src='https://scx2.b-cdn.net/gfx/news/2020/studyfindsme.jpg'
+              src='https://ichef.bbci.co.uk/news/976/cpsprodpb/CAF2/production/_122945915_gettyimages-1291715271.jpg'
               text='Login as Vaccine staff'
               path='/login_form'
             />
