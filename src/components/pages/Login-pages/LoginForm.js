@@ -9,36 +9,34 @@ import './Login-Form.css'
 function Login_Form() {
   return (
     <>
+    <div className='bgg'>
       <Navbar
       NavButtonName='Register'
       NavButtonlink='/registration'/>
 
-      <div class="bg">
-      <div class="form-container">
-      <form id="loginForm">
-      <label for="username"><b>Username</b></label>
-      <input id="username" class="box" type="text"  placeholder="Enter Username" name="username" required/>
-
-      <label for="password"><b>Password</b></label>
-      <input id="password" class="box" type="password" placeholder="Enter Password" name="password" required/>
-
-      <div class="form-group">  
-          <input type="checkbox" name="remember" />  
-          <label for="remember-me">Remember me</label>  
-          </div> 
-
-          <button type="submit" class="btn" id="login" name="login">login</button>
-          
-            
-
-          <span class="psw"><Link
-                to='/registration' >
-               Register Now
-              </Link></span>
+<div className="center">
+      <h1>Login</h1>
+      <form>
+        <div className="txt_field">
+          <input type="text" required/>
+          <span></span>
+          <label>Enter ID</label>
+        </div>
+        <div className="txt_field">
+          <input type="password" required/>
+          <span></span>
+          <label>Enter Password</label>
+        </div>
+        
+        <input type="submit" value="Login"/>
+        <div className="signup_link">
+        Not Registered? <Link to='/registration'>Register Here</Link>
+        </div>
       </form>
-      </div>
-      </div>
+    </div>
+
       <Footer/>
+      </div>
     </>
   );
 }

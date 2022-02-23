@@ -9,56 +9,72 @@ import './Registration-Form.css'
 function Registration_Form() {
   return (
     <>
+    <div className='bgg'>
       <Navbar
       NavButtonName='Login'
       NavButtonlink='/login'/>
 
-<div class="bg">
-<div class="form-container">
-<form id="registrationForm">
-<h4>Register Here</h4>
- <p>Please fill in this form to create an account.</p>
- <div>
- <div>
- <label for="fname">First Name: </label>
- <br></br>
- <input class="box" type="text" class="fname" placeholder="Enter First Name" name="fname" id="fname" required/>
- </div>
- <div id="line">
- <label for="lname">Last Name: <br></br> </label>
- <input class="box" type="text" class="lname" placeholder="Enter Last Name" name="lname" id="lname" required/>
- </div>
- </div>
- <div>          
- <label for="nid">NID card Number <br></br> </label>
- <input class="box" type="text" class="nid" placeholder="Enter NID" name="nid" id="nid" required/>
- </div>
- <div>
-             
- <label for="password">Enter Password: <br></br> </label>
- <input class="box" type="password" class="password" placeholder="Enter Password" name="password" id="password" required/>
- </div>
 
- <div>
-             
- <label for="password">Confirm Password: <br></br> </label>
- <input class="box" type="password" class="confirmpassword" placeholder="Enter Password" name="confirmpassword" id="confirmpassword" required/>
- </div>
+<div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">First Name</span>
+            <input type="text" placeholder="Enter your First name" required/>
+          </div>
+          <div class="input-box">
+            <span class="details">Last name</span>
+            <input type="text" placeholder="Enter your Last name" required/>
+          </div>
+          <div class="input-box">
+            <span class="details">NID</span>
+            <input type="text" placeholder="Enter your NID" required/>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" placeholder="Enter your number" required/>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="text" placeholder="Enter your password" required/>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="text" placeholder="Confirm your password" required/>
+          </div>
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1"/>
+          <input type="radio" name="gender" id="dot-2"/>
+          <input type="radio" name="gender" id="dot-3"/>
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register"/>
+        </div>
+      </form>
+    </div>
+  </div>
 
- <div>
-             
- <label for="phonenumber">Phone Number: <br></br> </label>
- <input class="box" type="number" class="phonenumber" placeholder="Enter Phone Number" name="phonenumber" id="phonenumber" required/>
- </div>
- <button type="submit" class="btn" id="register2" name="register2">Register</button>
 
- <div>
-                    <span class="psw"><Link to='/login'><p>Already have an account? Log In</p></Link> </span>
-              </div>
-</form>
-    </div>           
-    </div>      
       <Footer/>
+      </div>
     </>
   );
 }

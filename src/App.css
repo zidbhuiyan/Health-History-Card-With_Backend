@@ -5,29 +5,10 @@
   font-family: "PT Sans", sans-serif;
 }
 
-.home,
-.about,
-.registration {
+.home {
   display: flex;
   height: 92vh;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
-}
-.about {
-  background-image: url("https://media.istockphoto.com/photos/the-gray-and-silver-are-light-black-with-white-the-gradient-is-the-picture-id1322292759?b=1&k=20&m=1322292759&s=170667a&w=0&h=FtcK2R11RjeMUkMUWu5kxFmYR8pY-G8OLs99PnWIJpE=");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: black;
-  font-size: 100px;
-}
-
-.registration {
-  background-image: url("https://colorlib.com/wp/wp-content/uploads/sites/2/colorlib-registration-form-8.jpg");
-  background-position: center;
-  background-size: 70%;
-  background-repeat: no-repeat;
-  color: black;
-  font-size: 100px;
 }
