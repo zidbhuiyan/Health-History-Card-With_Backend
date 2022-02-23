@@ -63,7 +63,7 @@ function Contact() {
                   <input
                     type="submit"
                     class="btn"
-                    value="send message"
+                    value="Send message"
                     id="submitBtn"
                   />
                 </form>
