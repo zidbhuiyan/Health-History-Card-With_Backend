@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import './Navbar.css';
 
-function Navbar() {
+function Navbar(props) {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -30,7 +30,7 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            Health History Crad
+            Medical History Card
             <i class='fab fa-typo3' />
           </Link>
           <div className='menu-icon' onClick={handleClick}>
@@ -38,14 +38,14 @@ function Navbar() {
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>
-              <HashLink smooth to='#hero' className='nav-links' onClick={closeMobileMenu}>
+              <Link smooth to='/' className='nav-links' onClick={closeMobileMenu}>
                 Home
-              </HashLink>
+              </Link>
             </li>
             <li className='nav-item'>
-              <HashLink smooth to='#service' className='nav-links' onClick={closeMobileMenu}>
+              <Link smooth to='/service' className='nav-links' onClick={closeMobileMenu}>
                 Services
-              </HashLink>
+              </Link>
             </li>
             <li className='nav-item'>
               <Link
@@ -68,11 +68,11 @@ function Navbar() {
 
             <li>
               <Link
-                to='/registration'
+                to= {props.NavButtonlink}
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-               <Button buttonStyle='btn--outline'>Register Now</Button>
+               <Button buttonStyle='btn--outline'>{props.NavButtonName}</Button>
               </Link>
             </li>
           </ul>

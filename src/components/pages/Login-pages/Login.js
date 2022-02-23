@@ -1,14 +1,16 @@
 import React from 'react';
 import '../../../App';
 import Footer from '../../Footer';
-import Nav_login from './Nav-login';
 import Cards from '../../Cards';
+import Navbar from '../../Navbar';
 
 
 function Login() {
   return (
     <>
-      <Nav_login/>
+      <Navbar
+      NavButtonName='Register'
+      NavButtonlink='/registration'/>
       <Cards/>
       <Footer/>
     </>

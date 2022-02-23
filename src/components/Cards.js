@@ -2,38 +2,35 @@ import React from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
 
-function Cards() {
+function Cards(props) {
   return (
     <div className='cards'>
-      <h1>Check out these EPIC Destinations!</h1>
+      <h1>Login Here!</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>
             <CardItem
-              src='images/img-9.jpg'
-              text='Explore the hidden waterfall deep inside the Amazon Jungle'
-              path='/services'
+              src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqrjug5wizRLZJT1t4LMfmsYYGOliFcf60IPhwAIWZV6GAbUxxxeA61nJGDaZwl9YWIc0&usqp=CAU'
+              text='Login as Client'
+              path='/login_form'
             />
             <CardItem
-              src='images/img-2.jpg'
-              text='Travel through the Islands of Bali in a Private Cruise'
-              label='Luxury'
-              path='/services'
+              src='https://images.theconversation.com/files/304957/original/file-20191203-66986-im7o5.jpg'
+              text='Login as Doctor'
+              path='/login_form'
             />
           </ul>
           <ul className='cards__items'>
             
             <CardItem
-              src='images/img-4.jpg'
-              text='Experience Football on Top of the Himilayan Mountains'
-              label='Adventure'
-              path='/products'
+              src='https://ichef.bbci.co.uk/news/976/cpsprodpb/CAF2/production/_122945915_gettyimages-1291715271.jpg'
+              text='Login as Report staff'
+              path='/login_form'
             />
             <CardItem
-              src='images/img-8.jpg'
-              text='Ride through the Sahara Desert on a guided camel tour'
-              label='Adrenaline'
-              path='/sign-up'
+              src='https://scx2.b-cdn.net/gfx/news/2020/studyfindsme.jpg'
+              text='Login as Vaccine staff'
+              path='/login_form'
             />
           </ul>
         </div>

@@ -14,7 +14,7 @@ function CardItem(props) {
               src={props.src}
             />
             <div className='cards__item__info'>
-            <h5 className='cards__item__text'>{props.text}</h5>
+            
           </div>
           
           <div className='card-btns'>
@@ -24,7 +24,7 @@ function CardItem(props) {
           buttonStyle='btn--outline'
           buttonSize='btn--large'
         >
-          Login
+          {props.text}
         </Button>
         </Link>
       </div>
