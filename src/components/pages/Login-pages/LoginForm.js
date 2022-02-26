@@ -1,26 +1,25 @@
 import React from 'react';
 import '../../../App';
-import Footer from '../../Footer';
 import { Link } from 'react-router-dom';
-import Navbar from '../../Navbar';
 import './Login-Form.css'
+import Footer from '../../Footer';
+import Navbar from '../../Navbar';
 
-
-function Login_Form() {
+function Login_Form(props) {
   return (
     <>
     <div className='bgg'>
-      <Navbar
+    <Navbar
       NavButtonName='Register'
       NavButtonlink='/registration'/>
 
-<div className="center">
-      <h1>Login</h1>
+    <div className="center">
+      <h1>Login As {props.cat}</h1>
       <form>
         <div className="txt_field">
           <input type="text" required/>
           <span></span>
-          <label>Enter ID</label>
+          <label>Enter {props.catid} ID</label>
         </div>
         <div className="txt_field">
           <input type="password" required/>
@@ -34,9 +33,10 @@ function Login_Form() {
         </div>
       </form>
     </div>
+    <Footer/>
+    </div>
 
-      <Footer/>
-      </div>
+     
     </>
   );
 }

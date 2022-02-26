@@ -6,7 +6,7 @@ import Navbar from '../../Navbar';
 import './Registration-Form.css'
 
 
-function Registration_Form() {
+function Registration_Form_Report_Staff() {
   return (
     <>
     <div className='bgg'>
@@ -16,7 +16,7 @@ function Registration_Form() {
 
 
 <div class="container">
-    <div class="title">Registration</div>
+    <div class="title">Registar As Report Staff</div>
     <div class="content">
       <form>
         <div class="user-details">
@@ -29,8 +29,8 @@ function Registration_Form() {
             <input type="text" placeholder="Enter your Last name" required/>
           </div>
           <div class="input-box">
-            <span class="details">Birth ID</span>
-            <input type="text" placeholder="Enter your Birth ID" required/>
+            <span class="details">Report Staff Register ID</span>
+            <input type="text" placeholder="Enter your Register ID" required/>
           </div>
           <div class="input-box">
             <span class="details">NID</span>
@@ -87,4 +87,4 @@ function Registration_Form() {
   );
 }
 
-export default Registration_Form;
+export default Registration_Form_Report_Staff;

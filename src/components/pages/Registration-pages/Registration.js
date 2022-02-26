@@ -24,20 +24,19 @@ function Registration() {
             <CardItem
               src='https://images.theconversation.com/files/304957/original/file-20191203-66986-im7o5.jpg'
               text='Register as Doctor'
-              path='/Register_form'
+              path='/Register_form_doctor'
             />
           </ul>
           <ul className='cards__items'>
-            
-            <CardItem
-              src='https://ichef.bbci.co.uk/news/976/cpsprodpb/CAF2/production/_122945915_gettyimages-1291715271.jpg'
-              text='Register as Report staff'
-              path='/Register_form'
-            />
             <CardItem
               src='https://scx2.b-cdn.net/gfx/news/2020/studyfindsme.jpg'
+              text='Register as Report staff'
+              path='/Register_form_report_staff'
+            />
+            <CardItem
+              src='https://ichef.bbci.co.uk/news/976/cpsprodpb/CAF2/production/_122945915_gettyimages-1291715271.jpg'
               text='Register as Vaccine staff'
-              path='/Register_form'
+              path='/Register_form_vaccine_staff'
             />
           </ul>
         </div>
