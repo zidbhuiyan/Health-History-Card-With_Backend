@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from './Button';
+import { Button } from '../../Button';
 import { Link } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
-import './Navbar.css';
+import '../../Navbar.css';
 
-function Navbar(props) {
+function Doctor_Navbar(props) {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -32,49 +31,36 @@ function Navbar(props) {
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
 
           <i class="fa fa-id-card" aria-hidden="true"></i>
-            Medical History Card
+            Medical History Card 
             
           </Link>
+          
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
+         
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          <li className='nav-item'>
-              <Link smooth to='/' className='nav-links' onClick={closeMobileMenu}>
-                Home
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link smooth to='/service' className='nav-links' onClick={closeMobileMenu}>
-                Services
-              </Link>
-            </li>
-            <li className='nav-item'>
+          <div className='doctor-panel'>
+              Doctor Panel
+          </div>
+          <li>
               <Link
-                to='/about'
+                to='/'
                 className='nav-links'
                 onClick={closeMobileMenu}
-              >
-                About
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link
-                to='/contact'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Contact
+              > 
+               <i class="fa fa-search" aria-hidden="true"/>
+               Search
               </Link>
             </li>
 
             <li>
               <Link
-                to= {props.NavButtonlink}
+                to='/'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-               <Button buttonStyle='btn--outline'>{props.NavButtonName}</Button>
+               <Button buttonStyle='btn--outline'>Logout</Button>
               </Link>
             </li>
             
@@ -85,4 +71,4 @@ function Navbar(props) {
   );
 }
 
-export default Navbar;
+export default Doctor_Navbar;

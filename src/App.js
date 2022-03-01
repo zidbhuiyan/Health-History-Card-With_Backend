@@ -16,6 +16,7 @@ import Login_Form_Client from './components/pages/Login-pages/Login-Form-Client'
 import Login_Form_Doctor from './components/pages/Login-pages/Login-Form-Doctor';
 import Login_Form_Report_Staff from './components/pages/Login-pages/Login-Form-Report-Staff';
 import Login_Form_Vaccine_Staff from './components/pages/Login-pages/Login-Form-Vaccine-Staff';
+import Doctor_Home from './components/pages/Doctor-pages/Doctor_Home';
 
 function App() {
   return (
@@ -37,6 +38,8 @@ function App() {
         <Route path='/Register_form_doctor' element={<Registration_Form_Doctor/>}/>
         <Route path='/Register_form_vaccine_staff' element={<Registration_Form_Vaccine_Staff/>}/>
         <Route path='/Register_form_report_staff' element={<Registration_Form_Report_Staff/>}/>
+
+        <Route path='/doctor_home' element={<Doctor_Home/>}/>
         </Routes>
       </Router>
     </>

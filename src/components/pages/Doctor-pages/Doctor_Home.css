@@ -1,0 +1,7 @@
+.bgdoctor {
+  background: url(https://images.indianexpress.com/2022/01/doctor-759-4-1.jpg)
+    no-repeat;
+  background-size: cover;
+  min-height: 90vh;
+  width: 100%;
+}

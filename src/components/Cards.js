@@ -2,7 +2,7 @@ import React from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
 
-function Cards(props) {
+function Cards() {
   return (
     <div className='cards'>
       <h1>Login Here!</h1>

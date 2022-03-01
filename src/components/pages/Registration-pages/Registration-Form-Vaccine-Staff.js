@@ -37,8 +37,8 @@ function Registration_Form_Vaccine_Staff() {
             <input type="text" placeholder="Enter your NID" required/>
           </div>
           <div class="input-box">
-            <span class="details">Age</span>
-            <input type="text" placeholder="Enter your age" required/>
+            <span class="details">Date of Birth(DD/MM/YY)</span>
+            <input type="text" placeholder="Enter your Date of Birth" required/>
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
@@ -52,27 +52,17 @@ function Registration_Form_Vaccine_Staff() {
             <span class="details">Confirm Password</span>
             <input type="text" placeholder="Confirm your password" required/>
           </div>
-        </div>
-        <div class="gender-details">
-          <input type="radio" name="gender" id="dot-1"/>
-          <input type="radio" name="gender" id="dot-2"/>
-          <input type="radio" name="gender" id="dot-3"/>
-          <span class="gender-title">Gender</span>
-          <div class="category">
-            <label for="dot-1">
-            <span class="dot one"></span>
-            <span class="gender">Male</span>
-          </label>
-          <label for="dot-2">
-            <span class="dot two"></span>
-            <span class="gender">Female</span>
-          </label>
-          <label for="dot-3">
-            <span class="dot three"></span>
-            <span class="gender">Prefer not to say</span>
-            </label>
+          <div class="input-box">
+            <span class="details">Gender</span>
+            <select name="gender">
+            <option value="" disabled selected>Select Gender</option>
+	          <option value="male">Male</option>
+	          <option value="female">Female</option>
+          	<option value="other">Prefer not to say</option>
+            </select>
           </div>
         </div>
+        
         <div class="button">
           <input type="submit" value="Register"/>
         </div>
