@@ -15,8 +15,9 @@ function SearchBar(props) {
                       
                       required
                     />
+
+                    <Button buttonStyle='btn--outline' buttonSize='btn--medium'><i class="fa fa-search" aria-hidden="true"/> </Button>
                     
-                    <i class="fa fa-search" aria-hidden="true"/>
                   </div>
                   
             

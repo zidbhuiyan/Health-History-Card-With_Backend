@@ -59,6 +59,17 @@ function Doctor_Navbar(props) {
                 to='/'
                 className='nav-links'
                 onClick={closeMobileMenu}
+              > 
+               <i class="fa fa-user" aria-hidden="true"></i>
+               Profile
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to='/'
+                className='nav-links'
+                onClick={closeMobileMenu}
               >
                <Button buttonStyle='btn--outline'>Logout</Button>
               </Link>
