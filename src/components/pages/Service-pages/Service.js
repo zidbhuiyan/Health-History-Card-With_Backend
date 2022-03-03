@@ -8,8 +8,7 @@ function Service() {
   return (
     <>
     <Navbar
-      NavButtonName='Register'
-      NavButtonlink='/registration'/>
+      NavPage = 'other'/>
       <div class="bgs">
       <section class="services" id="services">
         <h1 class="heading">

@@ -9,8 +9,7 @@ function Login() {
   return (
     <>
       <Navbar
-      NavButtonName='Register'
-      NavButtonlink='/registration'/>
+      NavPage="Home"/>
       <Cards/>
       <Footer/>
     </>

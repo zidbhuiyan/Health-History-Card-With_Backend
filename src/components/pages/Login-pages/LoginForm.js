@@ -10,8 +10,7 @@ function Login_Form(props) {
     <>
     <div className='bgg'>
     <Navbar
-      NavButtonName='Register'
-      NavButtonlink='/registration'/>
+      NavPage="other"/>
 
     <div className="center">
       <h1>Login As {props.cat}</h1>

@@ -9,8 +9,7 @@ function Registration() {
   return (
     <>
       <Navbar
-      NavButtonName='Login'
-      NavButtonlink='/login'/>
+      NavPage='registration'/>
       <div className='cards'>
       <h1>Register Here!</h1>
       <div className='cards__container'>

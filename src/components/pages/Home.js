@@ -7,9 +7,7 @@ import Navbar from '../Navbar';
 function Home() {
   return (
     <>
-      <Navbar
-      NavButtonName='Register'
-      NavButtonlink='/registration'/>
+      <Navbar NavPage='Home'/>
       <HeroSection/>
       <Footer/>
     </>

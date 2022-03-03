@@ -7,8 +7,7 @@ function About() {
   return (
     <>
       <Navbar
-      NavButtonName='Register'
-      NavButtonlink='/registration'/>
+      NavPage = 'other'/>
       <h1 className='about'>About</h1>
       <Footer/>
     </>

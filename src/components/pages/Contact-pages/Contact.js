@@ -8,8 +8,7 @@ function Contact() {
   return (
     <>
       <Navbar
-      NavButtonName='Register'
-      NavButtonlink='/registration'/>
+      NavPage='other'/>
       <div class="bgc">
       <div class="contact" id="contact">
         <h1 class="heading">

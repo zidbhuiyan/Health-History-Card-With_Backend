@@ -10,9 +10,8 @@ function Registration_Form_Doctor() {
   return (
     <>
     <div className='bgg'>
-      <Navbar
-      NavButtonName='Login'
-      NavButtonlink='/login'/>
+    <Navbar
+      NavPage="other"/>
 
 
 <div class="container">
