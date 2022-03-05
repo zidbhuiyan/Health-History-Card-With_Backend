@@ -4,7 +4,6 @@ import Footer from '../../Footer';
 import { Link } from 'react-router-dom';
 import Navbar from '../../Navbar';
 import './Registration-Form.css'
-import axios from "axios"
 
 
 
@@ -39,8 +38,7 @@ function Registration_Form() {
     <>
     <div className='bgg'>
       <Navbar
-      NavButtonName='Login'
-      NavButtonlink='/login'/>
+      NavPage='other'/>
 
 
 <div class="container">
@@ -67,7 +65,7 @@ function Registration_Form() {
           </div>
           <div class="input-box">
             <span class="details">Date of Birth(DD/MM/YYYY)</span>
-            <input type="text" name="dateofbirth" value={user.dateofbirth}  placeholder="Enter your Date of Birth" onChange={ handleChange } required/>
+            <input type="date" name="dateofbirth" value={user.dateofbirth}  placeholder="Enter your Date of Birth" onChange={ handleChange } required/>
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>

@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/pages/Home';
 import Login from './components/pages/Login-pages/Login';
 import Registration from './components/pages/Registration-pages/Registration';
-import About from './components/pages/About';
 import Contact from './components/pages/Contact-pages/Contact';
 import Service from './components/pages/Service-pages/Service';
 import Login_Form from './components/pages/Login-pages/LoginForm';
@@ -17,6 +16,8 @@ import Login_Form_Doctor from './components/pages/Login-pages/Login-Form-Doctor'
 import Login_Form_Report_Staff from './components/pages/Login-pages/Login-Form-Report-Staff';
 import Login_Form_Vaccine_Staff from './components/pages/Login-pages/Login-Form-Vaccine-Staff';
 import Doctor_Home from './components/pages/Doctor-pages/Doctor_Home';
+import About from './components/pages/About-pages/About';
+
 
 function App() {
   return (

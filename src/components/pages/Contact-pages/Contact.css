@@ -1,6 +1,12 @@
 .bgc {
-  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2CW1iMEC8lYrjC1o_B4mtLBVrubT8zminqQ&usqp=CAU)
-    no-repeat;
+  background: rgb(185, 186, 184);
+  background: linear-gradient(
+    0deg,
+    rgba(185, 186, 184, 1) 0%,
+    rgba(19, 28, 39, 1) 0%,
+    rgba(181, 177, 174, 1) 100%,
+    rgba(29, 28, 27, 1) 100%
+  );
   background-size: cover;
   min-height: 90vh;
   width: 100%;

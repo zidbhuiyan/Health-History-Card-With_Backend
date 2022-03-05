@@ -1,6 +1,12 @@
 .bgs {
-  background: url(https://cdn0.scrvt.com/39b415fb07de4d9656c7b516d8e2d907/064ec5e7d6bb6b38/bbd687bf73be/v/c06dc2a5f574/siemens-healthineers_Digital_transformation_US_hospitals.jpg?nowebp=1)
-    no-repeat;
+  background: rgb(185, 186, 184);
+  background: linear-gradient(
+    0deg,
+    rgba(185, 186, 184, 1) 0%,
+    rgba(19, 28, 39, 1) 0%,
+    rgba(181, 177, 174, 1) 100%,
+    rgba(29, 28, 27, 1) 100%
+  );
   background-size: cover;
   min-height: 90vh;
   width: 100%;
@@ -16,7 +22,7 @@
 
   color: black;
 
-  padding: 0.1rem 1rem;
+  padding: 0.1rem 0.1rem;
 }
 
 .heading span.space {
@@ -26,11 +32,12 @@
 .services .box-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  padding: 1.5rem;
+  gap: 1rem;
 }
 
 .services .box-container .box {
-  flex: 1 1 30rem;
+  flex: 1 1 25rem;
   border-radius: 0.5rem;
   padding: 1rem;
   text-align: center;
