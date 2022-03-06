@@ -26,7 +26,7 @@ function Login_Form(props) {
     <>
     <div className='bgg'>
     <Navbar
-      Navpage='other'/>
+      NavPage="other"/>
 
     <div className="center">
       {console.log(user)}
