@@ -6,7 +6,6 @@ import Login from './components/pages/Login-pages/Login';
 import Registration from './components/pages/Registration-pages/Registration';
 import Contact from './components/pages/Contact-pages/Contact';
 import Service from './components/pages/Service-pages/Service';
-import Login_Form from './components/pages/Login-pages/LoginForm';
 import Registration_Form from './components/pages/Registration-pages/Registration-Form';
 import Registration_Form_Doctor from './components/pages/Registration-pages/Registration-Form-Doctor';
 import Registration_Form_Vaccine_Staff from './components/pages/Registration-pages/Registration-Form-Vaccine-Staff';

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../../App.css';
+import About_card from '../../About-card';
 import Footer from '../../Footer';
 import Navbar from '../../Navbar';
 import './About.css'
@@ -23,28 +24,29 @@ function About() {
           <span>s</span>
         </h1>
 
-        <div class="box-container">
-          <div class="box">
-              <div className='aboutimg'>
-                  <img src="./images/img-1.jpg"/>
-              </div>
-              <h3>Samiha Fairooz</h3>
-              <p>garbage value</p>
-          </div>
-          <div class="box">
-          <div className='aboutimg'>
-              </div>
-              <h3>Shakila Yesmin Miti</h3>
-              <p>garbage value</p>
-          </div>
-          <div class="box">
-             <div className='aboutimg'>
-                 
-              </div>
-              <h3>Zihadul Islam</h3>
-              <p>garbage value</p>
-          </div>
+        
+      <div className='about_cards__container'>
+        <div className='about_cards__wrapper'>
+          <ul className='about_cards__items'>
+          <About_card
+              src='images/miti.jpeg'
+              name='Shakila Yeasmin Miti'
+              
+            />
+            <About_card
+              src='images/samiha.jpg'
+              name='Samiha Fairooz'
+              
+            />
+             <About_card
+              src='images/zihad.jpg'
+              name='Zihadul Islam'
+            
+            />
+          </ul>
         </div>
+      </div>
+    
       </section>
     </div>
     <Footer/>
