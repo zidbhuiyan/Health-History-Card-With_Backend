@@ -36,7 +36,7 @@ function Registration_Form_Report_Staff() {
             <input type="text" placeholder="Enter your NID" required/>
           </div>
           <div class="input-box">
-            <span class="details">Date of Birth(DD/MM/YY)</span>
+            <span class="details">Date of Birth(DD/MM/YYYY)</span>
             <input type="text" placeholder="Enter your Date of Birth" required/>
           </div>
           <div class="input-box">
