@@ -64,7 +64,7 @@ function Registration_Form() {
             <input type="text" name="nid" value={user.nid}  placeholder="Enter your NID" onChange={ handleChange } required/>
           </div>
           <div class="input-box">
-            <span class="details">Date of Birth(DD/MM/YYYY)</span>
+            <span class="details">Date of Birth(MM/DD/YYYY)</span>
             <input type="date" name="dateofbirth" value={user.dateofbirth}  placeholder="Enter your Date of Birth" onChange={ handleChange } required/>
           </div>
           <div class="input-box">
