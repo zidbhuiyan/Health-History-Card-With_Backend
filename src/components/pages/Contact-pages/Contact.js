@@ -1,10 +1,33 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../../../App.css';
 import Footer from '../../Footer';
 import Navbar from '../../Navbar';
 import './Contact.css'
 
 function Contact() {
+
+  const [input, setInput] = useState({
+    name: '',
+    email: '',
+    message: ''
+  })
+
+  function handleChange(event){
+    const {name, value} = event.target;
+
+    setInput(prevInput => {
+    return{
+        ...prevInput,
+        [name] : value
+    }
+    
+  })
+}
+  function handleClick(event){
+     event.preventDefault();
+     console.log(input);
+  }
+
   return (
     <>
       <Navbar
@@ -33,8 +56,9 @@ function Contact() {
                   </div>
                   
                   <div class="inputBox">
-                    <input
+                    <input onChange ={handleChange}
                       type="text"
+                      value={input.name}
                       placeholder="Enter You Name"
                       id="name"
                       required
@@ -44,22 +68,24 @@ function Contact() {
                     <label for="email">Email: </label>
                   </div>
                   <div class="inputBox">
-                    <input
+                    <input onChange ={handleChange}
                       type="email"
+                      value={input.email}
                       placeholder="Enter Your E-mail"
                       id="email"
                       required
                     />
                   </div>
-                  <textarea
+                  <textarea onChange ={handleChange}
                     placeholder="Please, type Your message here"
                     name=""
+                    value={input.message}
                     cols="30"
                     rows="10"
                     id="message"
                     required
                   ></textarea>
-                  <input
+                  <input onClick={handleClick}
                     type="submit"
                     class="btn"
                     value="Send message"
