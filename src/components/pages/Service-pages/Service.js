@@ -31,7 +31,7 @@ function Service() {
           <div class="box">
               <i class="garbage value"></i>
               <h3>garbage value</h3>
-              <p>It’s never too late to get great prices.</p>
+              <p>garbage value</p>
           </div>
           <div class="box">
           <i class="garbage value"></i>

@@ -28,11 +28,7 @@ function About() {
       <div className='about_cards__container'>
         <div className='about_cards__wrapper'>
           <ul className='about_cards__items'>
-          <About_card
-              src='images/miti.jpeg'
-              name='Shakila Yeasmin Miti'
-              
-            />
+  
             <About_card
               src='images/samiha.jpg'
               name='Samiha Fairooz'
@@ -42,6 +38,12 @@ function About() {
               src='images/zihad.jpg'
               name='Zihadul Islam'
             
+            />
+
+            <About_card
+              src='images/miti.jpeg'
+              name='Shakila Yeasmin Miti'
+              
             />
           </ul>
         </div>

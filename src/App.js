@@ -16,6 +16,7 @@ import Login_Form_Report_Staff from './components/pages/Login-pages/Login-Form-R
 import Login_Form_Vaccine_Staff from './components/pages/Login-pages/Login-Form-Vaccine-Staff';
 import Doctor_Home from './components/pages/Doctor-pages/Doctor_Home';
 import About from './components/pages/About-pages/About';
+import Profile from './components/pages/Profile-pages/Profile';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
         <Route path='/Register_form_report_staff' element={<Registration_Form_Report_Staff/>}/>
 
         <Route path='/doctor_home' element={<Doctor_Home/>}/>
+        <Route path='/profile' element={<Profile/>}/>
         </Routes>
       </Router>
     </>
