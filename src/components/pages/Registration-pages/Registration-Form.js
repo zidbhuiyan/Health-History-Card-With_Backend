@@ -46,7 +46,7 @@ function Registration_Form() {
     <div class="title">Registration</div>
     <div class="content">
       <form>
-        <div class="user-details">
+        <div class="user-details" >
           <div class="input-box">
             <span class="details">First Name</span>
             <input type="text" name="firstname" value={user.firstname} placeholder="Enter your First name"  onChange={ handleChange } required/>
