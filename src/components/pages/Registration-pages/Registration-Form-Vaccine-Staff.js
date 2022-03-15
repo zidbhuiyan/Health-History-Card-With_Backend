@@ -36,8 +36,8 @@ function Registration_Form_Vaccine_Staff() {
             <input type="text" placeholder="Enter your NID" required/>
           </div>
           <div class="input-box">
-            <span class="details">Date of Birth(DD/MM/YY)</span>
-            <input type="text" placeholder="Enter your Date of Birth" required/>
+            <span class="details">Date of Birth(MM/DD/YYYY)</span>
+            <input type="date" placeholder="Enter your Date of Birth" required/>
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
