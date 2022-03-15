@@ -9,7 +9,7 @@ function Contact() {
   const [input, setInput] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
   })
 
   function handleChange(event){
@@ -57,6 +57,7 @@ function Contact() {
                   
                   <div class="inputBox">
                     <input onChange ={handleChange}
+                      name= "name"
                       type="text"
                       value={input.name}
                       placeholder="Enter You Name"
@@ -69,6 +70,7 @@ function Contact() {
                   </div>
                   <div class="inputBox">
                     <input onChange ={handleChange}
+                      name= "email"
                       type="email"
                       value={input.email}
                       placeholder="Enter Your E-mail"
@@ -77,8 +79,8 @@ function Contact() {
                     />
                   </div>
                   <textarea onChange ={handleChange}
+                    name= "message"
                     placeholder="Please, type Your message here"
-                    name=""
                     value={input.message}
                     cols="30"
                     rows="10"
