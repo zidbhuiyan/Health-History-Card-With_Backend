@@ -64,23 +64,7 @@ function Registration_Form() {
             <input type="text" name="nid" value={user.nid}  placeholder="Enter your NID" onChange={ handleChange } required/>
           </div>
           <div class="input-box">
-            <span class="details">Father's Name</span>
-            <input type="text" name="father_name" value={user.father_name} placeholder="Enter your Father's Name" onChange={ handleChange } required/>
-          </div>
-          <div class="input-box">
-            <span class="details">Father's NID</span>
-            <input type="text" name="father_nid" value={user.father_nid}  placeholder="Enter your Father's NID" onChange={ handleChange } required/>
-          </div>
-          <div class="input-box">
-            <span class="details">Mother's Name</span>
-            <input type="text" name="mother_name" value={user.mother_name} placeholder="Enter your Mother's Name" onChange={ handleChange } required/>
-          </div>
-          <div class="input-box">
-            <span class="details">Mother's NID</span>
-            <input type="text" name="mother_nid" value={user.mother_nid}  placeholder="Enter your Mother's NID" onChange={ handleChange } required/>
-          </div>
-          <div class="input-box">
-            <span class="details">Date of Birth(DD/MM/YYYY)</span>
+            <span class="details">Date of Birth(MM/DD/YYYY)</span>
             <input type="date" name="dateofbirth" value={user.dateofbirth}  placeholder="Enter your Date of Birth" onChange={ handleChange } required/>
           </div>
           <div class="input-box">
