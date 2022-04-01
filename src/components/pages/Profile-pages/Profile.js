@@ -4,6 +4,15 @@ import Footer from '../../Footer';
 import Info_Navbar from '../../Info_Navbar';
 import Navbar from '../../Navbar';
 
+const RenderMedInfo = () =>{
+  return(
+    <>
+    
+    </>
+  )
+
+}
+
 function Profile(props) {
     return (
       <>
@@ -56,7 +65,7 @@ function Profile(props) {
       </form>
       <div class="title">Medical Information</div>
       <Info_Navbar/>
-    
+      <RenderMedInfo/>    
     </div>
   </div>
         

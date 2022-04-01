@@ -1,106 +1,109 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Tabs, Tab, AppBar,Box } from "@material-ui/core";
+import { Route, BrowserRouter, Switch, Link } from "react-router-dom";
 import './Info_Navbar.css';
 
-function Info_Navbar(props) {
 
-  const RenderMenuInfo = () =>{
-    
+function Info_Navbar() {
+
+  const [value, setValue] = React.useState(0)
+
+  const handleChange = (event, newValue) =>{
+    setValue(newValue) 
+  }
+
+  console.log(value);
+
+  function TabPanel(){
+    if(value == 0){
       return(
         <>
-        <li className='info_nav-item'>
-                 <Link  to='/profile' className='info_nav-links' onClick={closeMobileMenu}>
-                 Vaccination History
-                 </Link>
-               </li>
-               <li className='info_nav-item'>
-                 <Link  to='/profile' className='info_nav-links' onClick={closeMobileMenu}>
-                 Personal History
-                 </Link>
-               </li>
-               <li className='info_nav-item'>
-                 <Link
-                   to='/profile'
-                   className='info_nav-links'
-                   onClick={closeMobileMenu}
-                 >
-                   Investigation Profile
-                 </Link>
-               </li>
-               <li className='info_nav-item'>
-                 <Link
-                   to='/profile'
-                   className='info_nav-links'
-                   onClick={closeMobileMenu}
-                 >
-                   Prescriptions
-                 </Link>
-               </li>
-
-               <li className='info_nav-item'>
-                 <Link
-                   to='/profile'
-                   className='info_nav-links'
-                   onClick={closeMobileMenu}
-                 >
-                   Drug History
-                 </Link>
-               </li>
-
-               <li className='info_nav-item'>
-                 <Link
-                   to='/profile'
-                   className='info_nav-links'
-                   onClick={closeMobileMenu}
-                 >
-                   Doctors’ Suggestions 
-                 </Link>
-               </li>
-               
-            
-         
+         <div>
+           <h1>Vaccine History</h1>
+         </div>
         </>
-      )
-  }
-  const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
-  
-
- 
-
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-
- 
-
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
+      );
     }
-  };
 
-  useEffect(() => {
-    showButton();
-  }, []);
+    else if(value == 1){
+      return(
+        <>
+         <div>
+           <h1>Personal History</h1>
+         </div>
+        </>
+      );
+    }
 
-  window.addEventListener('resize', showButton);
+    else if(value == 2){
+      return(
+        <>
+         <div>
+           <h1>Investigation Profile</h1>
+         </div>
+        </>
+      );
+    }
+    else if(value == 3){
+      return(
+        <>
+         <div>
+           <h1>Prescriptions</h1>
+         </div>
+        </>
+      );
+    }
+    else if(value == 4){
+      return(
+        <>
+         <div>
+           <h1>Drug History</h1>
+         </div>
+        </>
+      );
+    }
+    else if(value == 5){
+      return(
+        <>
+         <div>
+           <h1>Family History</h1>
+         </div>
+        </>
+      );
+    }
+    else if(value == 6){
+      return(
+        <>
+         <div>
+           <h1>Doctors’ Suggestions</h1>
+         </div>
+        </>
+      );
+    }
+    
+  }
 
   return (
-    <>
-      <info_nav className='info_navbar'>
-        <div className='info_navbar-container'>
-          <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-          </div>
-          <ul className={click ? 'info_nav-menu active' : 'info_nav-menu'}>
-            
-            <RenderMenuInfo/>
-            
-          </ul>
-        </div>
-      </info_nav>
+    <> 
+    <Box className='info_navbar'>
+    <Tabs
+        className='info_navbar-container'
+        value={value}
+        onChange={handleChange}
+        variant="scrollable"
+        scrollButtons="auto"
+       
+      >
+        <Tab className='tab_size' label="Vaccination History" />
+        <Tab className='tab_size' label="Personal History" />
+        <Tab  className='tab_size' label="Investigation Profile" />
+        <Tab className='tab_size' label="Prescriptions" />
+        <Tab className='tab_size' label="Drug History" />
+        <Tab  className='tab_size' label="Family History" />
+        <Tab className='tab_size' label="Doctors’ Suggestions" />
+      </Tabs>
+    </Box>
+    <TabPanel/>
     </>
   );
 }

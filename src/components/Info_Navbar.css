@@ -2,6 +2,7 @@
   background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   height: 100%;
   width: 100%;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,126 +16,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
+
+  height: 70px;
 }
 
-.info_nav-menu {
-  display: grid;
-  grid-template-columns: repeat(6, auto);
-  grid-gap: 20px;
-  list-style: none;
-  text-align: center;
-
-  justify-content: center;
-}
-
-.info_nav-item {
-  height: 80px;
-}
-
-.info_nav-links {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  height: 100%;
-}
-
-.info_nav-links:hover {
-  border-bottom: 4px solid #fff;
-  transition: all 0.2s ease-out;
-}
-
-.fa-bars {
-  color: #fff;
-}
-
-.info_nav-links-mobile {
-  display: none;
-}
-
-.menu-icon {
-  display: none;
-}
-
-@media screen and (max-width: 960px) {
-  .info_navbarItems {
-    position: relative;
-  }
-
-  .info_nav-menu {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 80px;
-    left: -100%;
-    opacity: 1;
-    transition: all 0.5s ease;
-  }
-
-  .info_nav-menu.active {
-    background: #242222;
-    left: 0;
-    opacity: 1;
-    transition: all 0.5s ease;
-    z-index: 1;
-  }
-
-  .info_nav-links {
-    text-align: center;
-    padding: 2rem;
-    width: 100%;
-    display: table;
-  }
-
-  .info_nav-links:hover {
-    background-color: #fff;
-    color: #242424;
-    border-radius: 0;
-  }
-
-  .info_navbar-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(0.1%, 50%);
-  }
-
-  .menu-icon {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
-    cursor: pointer;
-  }
-
-  .fa-times {
-    color: #fff;
-    font-size: 2rem;
-  }
-
-  .info_nav-links-mobile {
-    display: block;
-    text-align: center;
-    margin: 2rem auto;
-    border-radius: 4px;
-    width: 80%;
-    text-decoration: none;
-    font-size: 1.5rem;
-    background-color: transparent;
-    color: #fff;
-    padding: 14px 20px;
-    border: 1px solid #fff;
-    transition: all 0.3s ease-out;
-  }
-
-  .info_nav-links-mobile:hover {
-    background: #fff;
-    color: #242424;
-    transition: 250ms;
-  }
+.tab_size {
+  width: 5%;
 }
