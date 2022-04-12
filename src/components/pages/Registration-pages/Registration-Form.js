@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../../../App';
 import Footer from '../../Footer';
-import { Link } from 'react-router-dom';
 import Navbar from '../../Navbar';
 import './Registration-Form.css'
 
