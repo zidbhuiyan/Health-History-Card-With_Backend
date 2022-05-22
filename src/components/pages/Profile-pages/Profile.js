@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../../App.css';
+import './Profile.css'
 import Footer from '../../Footer';
 import Info_Navbar from '../../Info_Navbar';
 import Navbar from '../../Navbar';
@@ -7,6 +8,7 @@ import Navbar from '../../Navbar';
 function Profile(props) {
     return (
       <>
+       <div class ="bgpc">
         <Navbar
         NavPage='profile'/>
 
@@ -58,8 +60,10 @@ function Profile(props) {
       <Info_Navbar/>  
     </div>
   </div>
+ 
         
         <Footer/>
+        </div>
       </>
     );
   }

@@ -13,6 +13,7 @@ const Print_card = () => {
 
     return (
       <>
+      <div class ="bgpc">
         <Navbar
         NavPage='profile'/>
 
@@ -45,7 +46,11 @@ const Print_card = () => {
             </div>
             <div class="back">
                 <h1 class="Details">Information</h1>
+                
                 <div class="details-info">
+                <div class="qr_image">
+                        <img src="https://www.investopedia.com/thmb/ZG1jKEKttKbiHi0EkM8yJCJp6TU=/1148x1148/filters:no_upscale():max_bytes(150000):strip_icc()/qr-code-bc94057f452f4806af70fd34540f72ad.png" alt='Photo'/>
+                    </div>
                         <p class="left">Email:</p>
                         <p class="left_desi">email@email.com</p>
                         <p class="left">Blood Group:</p>
@@ -64,7 +69,7 @@ const Print_card = () => {
       
   </div>
 </div>
-  
+</div>
         <Footer/>
       </>
     );

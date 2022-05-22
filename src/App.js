@@ -18,6 +18,7 @@ import Doctor_Home from './components/pages/Doctor-pages/Doctor_Home';
 import About from './components/pages/About-pages/About';
 import Profile from './components/pages/Profile-pages/Profile';
 import Print_card from './components/pages/Print-card/print_card';
+import Doctor_Profile from './components/pages/Doctor-pages/Doctor_Profile';
 
 
 function App() {
@@ -42,6 +43,9 @@ function App() {
         <Route path='/Register_form_report_staff' element={<Registration_Form_Report_Staff/>}/>
 
         <Route path='/doctor_home' element={<Doctor_Home/>}/>
+        <Route path='/doctor_profile' element={<Doctor_Profile/>}/>
+        
+
         <Route path='/profile' element={<Profile/>}/>
         <Route path='/print_card' element={<Print_card/>}/>
         </Routes>

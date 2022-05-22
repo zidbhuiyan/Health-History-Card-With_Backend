@@ -11,7 +11,7 @@ function SearchBar(props) {
                   <div>
                     <input className='searchinput' 
                       type="text"
-                      placeholder="Search Birth Id of patient"
+                      placeholder="Search Health Id of patient"
                       
                       required
                     />

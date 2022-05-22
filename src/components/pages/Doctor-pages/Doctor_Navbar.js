@@ -28,7 +28,7 @@ function Doctor_Navbar(props) {
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+          <Link to='/doctor_home' className='navbar-logo' onClick={closeMobileMenu}>
 
           <i class="fa fa-id-card" aria-hidden="true"></i>
             Medical History Card 
@@ -45,7 +45,7 @@ function Doctor_Navbar(props) {
           </div>
           <li>
               <Link
-                to='/'
+                to='/doctor_home'
                 className='nav-links'
                 onClick={closeMobileMenu}
               > 
@@ -56,7 +56,7 @@ function Doctor_Navbar(props) {
 
             <li>
               <Link
-                to='/'
+                to='/doctor_profile'
                 className='nav-links'
                 onClick={closeMobileMenu}
               > 
