@@ -19,6 +19,10 @@ import About from './components/pages/About-pages/About';
 import Profile from './components/pages/Profile-pages/Profile';
 import Print_card from './components/pages/Print-card/print_card';
 import Doctor_Profile from './components/pages/Doctor-pages/Doctor_Profile';
+import Report_Staff_Home from './components/pages/Report-Staff-pages/Report_Staff_Home';
+import Report_Staff_Profile from './components/pages/Report-Staff-pages/Report_Staff_Profile';
+import Vaccine_Staff_Home from './components/pages/Vaccine-Staff-pages/Vaccine_Staff_Home';
+import Vaccine_Staff_Profile from './components/pages/Vaccine-Staff-pages/Vaccine_Staff_Profile';
 
 
 function App() {
@@ -44,6 +48,12 @@ function App() {
 
         <Route path='/doctor_home' element={<Doctor_Home/>}/>
         <Route path='/doctor_profile' element={<Doctor_Profile/>}/>
+
+        <Route path='/report_staff_home' element={<Report_Staff_Home/>}/>
+        <Route path='/report_staff_profile' element={<Report_Staff_Profile/>}/>
+
+        <Route path='/vaccine_staff_home' element={<Vaccine_Staff_Home/>}/>
+        <Route path='/vaccine_staff_profile' element={<Vaccine_Staff_Profile/>}/>
         
 
         <Route path='/profile' element={<Profile/>}/>

@@ -44,12 +44,8 @@ function Registration_Form_Doctor() {
             <input type="text" placeholder="Enter your number" required/>
           </div>
           <div class="input-box">
-            <span class="details">Password</span>
-            <input type="text" placeholder="Enter your password" required/>
-          </div>
-          <div class="input-box">
-            <span class="details">Confirm Password</span>
-            <input type="text" placeholder="Confirm your password" required/>
+            <span class="details">Hospital Name</span>
+            <input type="text" placeholder="Enter hospital name" required/>
           </div>
           <div class="input-box">
             <span class="details">Gender</span>
@@ -60,6 +56,15 @@ function Registration_Form_Doctor() {
           	<option value="other">Prefer not to say</option>
             </select>
           </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="text" placeholder="Enter your password" required/>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="text" placeholder="Confirm your password" required/>
+          </div>
+          
         </div>
        
         <div class="button">

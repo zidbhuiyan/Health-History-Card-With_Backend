@@ -1,16 +1,16 @@
 import React from 'react';
 import '../../../App.css';
 import Footer from '../../Footer';
-import Doctor_Navbar from './Doctor_Navbar';
+import Vaccine_Staff_Navbar from './Vaccine_Staff_Navbar';
 
-function Doctor_Profile(props) {
+function Vaccine_Staff_Profile(props) {
     return (
       <>
-        <Doctor_Navbar/>
+        <Vaccine_Staff_Navbar/>
 
 <div class="container">
   
-    <div class="title">Doctor Profile</div>
+    <div class="title">Vaccine Staff Profile</div>
     <div class="content">
     <form>
         <div class="user-details">
@@ -23,7 +23,7 @@ function Doctor_Profile(props) {
             <input type="text" placeholder="Enter your Last name" disabled/>
           </div>
           <div class="input-box">
-            <span class="details">Doctor Register ID</span>
+            <span class="details">Vaccine Staff Register ID</span>
             <input type="text" placeholder="Enter your Register ID" disabled/>
           </div>
           <div class="input-box">
@@ -38,12 +38,10 @@ function Doctor_Profile(props) {
             <span class="details">Phone Number</span>
             <input type="text" placeholder="Enter your number" disabled/>
           </div>
-
           <div class="input-box">
             <span class="details">Hospital Name</span>
             <input type="text" placeholder="Enter hospital name" disabled/>
           </div>
-         
           <div class="input-box">
             <span class="details">Gender</span>
             <input type="text" placeholder="Gender" disabled/>
@@ -58,4 +56,4 @@ function Doctor_Profile(props) {
     );
   }
   
-  export default Doctor_Profile;
+  export default Vaccine_Staff_Profile;

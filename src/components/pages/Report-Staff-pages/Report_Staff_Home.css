@@ -1,0 +1,7 @@
+.bgRepStf {
+    background: url(https://icma.org/sites/default/files/Staff%20Report.jpg)
+      no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+    width: 100%;
+  }
