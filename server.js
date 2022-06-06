@@ -10,6 +10,7 @@ mongoose.connect("mongodb+srv://shakila_miti:h2oh2oh2o@cluster0.rq5w1.mongodb.ne
 
 app.use("/", require("./routes/contactRoute"));
 app.use("/", require("./routes/clientRoute"));
+app.use("/", require("./routes/doctorRoute"));
 
 app.listen(3001,function(){
     console.log("express server is running on port 3001");
