@@ -7,6 +7,7 @@ router.route("/create1").post((req, res) =>{
     const lastname = req.body.lastname;
     const birthid = req.body.birthid;
     const nid = req.body.nid;
+    const hid = req.body.hid;
     const dateofbirth = req.body.dateofbirth;
     const phonenumber = req.body.phonenumber;
     const fathersname = req.body.fathersname;
@@ -24,6 +25,7 @@ router.route("/create1").post((req, res) =>{
        lastname,
        birthid,
        nid,
+       hid,
        dateofbirth,
        phonenumber,
        fathersname,

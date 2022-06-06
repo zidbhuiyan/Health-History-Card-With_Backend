@@ -13,6 +13,7 @@ function Registration_Form() {
     lastname: '',
     birthid: '',
     nid: '',
+    hid:'',
     dateofbirth: '',
     phonenumber: '',
     fathersname: '',
@@ -41,11 +42,23 @@ function Registration_Form() {
   function handleClick(event) {
     event.preventDefault();
 
+    const healthid = user.birthid;
+
+    const healthid1 = healthid.slice(0,4);
+    const healthid2 = healthid.slice(11);
+
+    const userhid = healthid1+healthid2;
+
+    user.hid = userhid;
+
+    console.log(user);
+
     const newClient = {
     firstname: user.firstname,
     lastname: user.lastname,
     birthid: user.birthid,
     nid: user.nid,
+    hid: user.hid,
     dateofbirth: user.dateofbirth,
     phonenumber: user.phonenumber,
     fathersname: user.fathersname,
@@ -92,6 +105,7 @@ function Registration_Form() {
             <span class="details">Birth ID</span>
             <input type="text" name="birthid" value={user.birthid} placeholder="Enter your Birth Certificate ID" id="birthid" onChange={ handleChange } required/>
           </div>
+
           <div class="input-box">
             <span class="details">NID</span>
             <input type="text" name="nid" value={user.nid}  placeholder="Enter your NID" id="nid" onChange={ handleChange } required/>

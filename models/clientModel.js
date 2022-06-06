@@ -5,6 +5,7 @@ const clientsSchema = {
     lastname: String,
     birthid: String,
     nid: String,
+    hid: String,
     dateofbirth: String,
     phonenumber: String,
     fathersname: String,
