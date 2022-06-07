@@ -53,29 +53,35 @@ function Registration_Form() {
 
     console.log(user);
 
-    const newClient = {
-    firstname: user.firstname,
-    lastname: user.lastname,
-    birthid: user.birthid,
-    nid: user.nid,
-    hid: user.hid,
-    dateofbirth: user.dateofbirth,
-    phonenumber: user.phonenumber,
-    fathersname: user.fathersname,
-    fathersnid: user.fathersnid,
-    mothersname: user.mothersname,
-    mothersnid: user.mothersnid,
-    presentaddress: user.presentaddress,
-    permanentaddress: user.permanentaddress,
-    password: user.password,
-    confirmpassword: user.confirmpassword,
-    gender: user.gender,
-    emergphonenumber: user.emergphonenumber
+    if(user.password!=user.confirmpassword){
+      alert("Password doesn't match");
     }
-    
-    axios.post('http://localhost:3001/create1', newClient)
+    else{
+      const newClient = {
+        firstname: user.firstname,
+        lastname: user.lastname,
+        birthid: user.birthid,
+        nid: user.nid,
+        hid: user.hid,
+        dateofbirth: user.dateofbirth,
+        phonenumber: user.phonenumber,
+        fathersname: user.fathersname,
+        fathersnid: user.fathersnid,
+        mothersname: user.mothersname,
+        mothersnid: user.mothersnid,
+        presentaddress: user.presentaddress,
+        permanentaddress: user.permanentaddress,
+        password: user.password,
+        confirmpassword: user.confirmpassword,
+        gender: user.gender,
+        emergphonenumber: user.emergphonenumber
+        }
+
+        axios.post('http://localhost:3001/create1', newClient)
     
     alert("Registration Done");
+    } 
+    
   }
  
  
