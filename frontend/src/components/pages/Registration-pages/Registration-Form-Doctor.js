@@ -34,30 +34,29 @@ function Registration_Form_Doctor() {
 
     function handleClick(event) {
       event.preventDefault();
-  
-      const newDoctor = {
-      Dfirstname: user.Dfirstname,
-      Dlastname: user.Dlastname,
-      Docregid: user.Docregid,
-      Dnid: user.Dnid,
-      Ddateofbirth: user.Ddateofbirth,
-      Dphonenumber: user.Dphonenumber,
-      hospitalname: user.hospitalname,
-      Dgender: user.Dgender,
-      Dpassword: user.Dpassword,
-      Dconfirmpassword: user.Dconfirmpassword,
-      }
-  
-      if(user.Dfirstname && user.Dlastname && user.Docregid && user.Dnid && user.Ddateofbirth && user.Dphonenumber && user.hospitalname && user.Dgender && user.Dpassword && user.Dconfirmpassword ){
-        alert("Successfully Registered!")
-        axios.post('http://localhost:3001/createDoc', newDoctor)
-        .then( res => console.log(res))
-      }
-  
-      else{
-        alert("Fill up all the fields!")
-      }
+    
+        const newDoctor = {
+          Dfirstname: user.Dfirstname,
+          Dlastname: user.Dlastname,
+          Docregid: user.Docregid,
+          Dnid: user.Dnid,
+          Ddateofbirth: user.Ddateofbirth,
+          Dphonenumber: user.Dphonenumber,
+          hospitalname: user.hospitalname,
+          Dgender: user.Dgender,
+          Dpassword: user.Dpassword,
+          Dconfirmpassword: user.Dconfirmpassword,
+          }
       
+          if(user.Dfirstname && user.Dlastname && user.Docregid && user.Dnid && user.Ddateofbirth && user.Dphonenumber && user.hospitalname && user.Dgender && user.Dpassword && user.Dconfirmpassword ){
+            alert("Successfully Registered!")
+            axios.post('http://localhost:3001/createDoc', newDoctor)
+            .then( res => console.log(res))
+          }
+      
+          else{
+            alert("Fill up all the fields!")
+          }   
      
     }
 

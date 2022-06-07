@@ -51,12 +51,7 @@ function Registration_Form() {
 
     user.hid = userhid;
 
-    console.log(user);
 
-    if(user.password!=user.confirmpassword){
-      alert("Password doesn't match");
-    }
-    else{
       const newClient = {
         firstname: user.firstname,
         lastname: user.lastname,
@@ -80,7 +75,7 @@ function Registration_Form() {
         axios.post('http://localhost:3001/create1', newClient)
     
     alert("Registration Done");
-    } 
+   
     
   }
  

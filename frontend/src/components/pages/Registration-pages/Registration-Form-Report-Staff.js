@@ -36,29 +36,29 @@ function Registration_Form_Report_Staff() {
   function handleClick(event) {
     event.preventDefault();
 
-    const newReportstaff = {
-      firstname: user.firstname,
-      lastname: user.lastname,
-      Rregid: user.Rregid,
-      nid: user.nid,
-      dateofbirth: user.dateofbirth,
-      phonenumber: user.phonenumber,
-      hospitalname: user.hospitalname,
-      gender: user.gender,
-      password: user.password,
-      confirmpassword: user.confirmpassword,
-    }
+      const newReportstaff = {
+        firstname: user.firstname,
+        lastname: user.lastname,
+        Rregid: user.Rregid,
+        nid: user.nid,
+        dateofbirth: user.dateofbirth,
+        phonenumber: user.phonenumber,
+        hospitalname: user.hospitalname,
+        gender: user.gender,
+        password: user.password,
+        confirmpassword: user.confirmpassword,
+      }
+  
+      if(user.firstname && user.lastname && user.Rregid && user.nid && user.dateofbirth && user.phonenumber && user.hospitalname && user.gender && user.password && user.confirmpassword  ){
+        alert("Successfully Registered!")
+        axios.post('http://localhost:3001/create3', newReportstaff)
+        .then( res => console.log(res))
+      }
+  
+      else{
+        alert("Fill up all the fields!")
+      }
 
-    if(user.firstname && user.lastname && user.Rregid && user.nid && user.dateofbirth && user.phonenumber && user.hospitalname && user.gender && user.password && user.confirmpassword  ){
-      alert("Successfully Registered!")
-      axios.post('http://localhost:3001/create3', newReportstaff)
-      .then( res => console.log(res))
-    }
-
-    else{
-      alert("Fill up all the fields!")
-    }
-    
    
   }
   
