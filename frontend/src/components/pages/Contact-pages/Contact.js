@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import '../../../App.css';
 import Footer from '../../Footer';
 import Navbar from '../../Navbar';
@@ -13,6 +13,10 @@ function Contact() {
     message: '',
   })
 
+  const [formErrors , setFormErrors] =useState({});
+  const [isSubmit , setIsSubmit] =useState(false);
+
+
   function handleChange(event){
     const {name, value} = event.target;
 
@@ -25,15 +29,56 @@ function Contact() {
   })
 }
   function handleClick(event){
+
      event.preventDefault();
-     const newContact = {
-       name: input.name,
-       email: input.email,
-       message: input.message
-     }
+
+     setFormErrors(validate(input));
+
+     setIsSubmit(true);
      
-     axios.post('http://localhost:3001/create', newContact)
-     alert("Messege Sent");
+  }
+
+  useEffect(()=> {
+    
+     if(Object.keys(formErrors).length === 0 && isSubmit){
+      
+      const newContact = {
+        name: input.name,
+        email: input.email,
+        message: input.message
+      }
+      
+      axios.post('http://localhost:3001/create', newContact)
+   
+     }
+  },[formErrors])
+
+  const validate = (values) =>{
+
+    const errors = {};
+
+    var nameRegex = /^[a-zA-Z ]{2,30}$/;
+    var emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if(!values.name){
+      errors.name = "* Name is required!";
+    }
+    else if(!nameRegex.test(values.name)){
+      errors.name = "* Name is not valid";
+    }
+
+    if(!values.email){
+      errors.email = "* Email is required!";
+    }
+    else if(!emailRegex.test(values.email)){
+      errors.email = "* Email is not valid";
+    }
+
+    if(!values.message){
+      errors.message = "* Message is required!";
+    }
+
+   return errors;
   }
 
   return (
@@ -55,14 +100,18 @@ function Contact() {
         <div class="box-container">
           <div class="box">
             <div class="content">
+              {(Object.keys(formErrors).length === 0 && isSubmit) ? 
+              (<div class = "suc"> Message sent successfully </div>) : 
+              (<div class = "suc"> &nbsp; </div>)}
               <h3>For any type of query, fill up this form!</h3>
               
               <div class="row">
-                <form id="contactForm">
+                <form id="contactForm" name="contactForm">
                   <div class="inputBox">
-                    <label for="cname">Name: </label>
+                    <label for="cname">Name:</label>
+                    
                   </div>
-                  
+                 
                   <div class="inputBox">
                     <input onChange ={handleChange}
                       name= "name"
@@ -71,10 +120,14 @@ function Contact() {
                       placeholder="Enter You Name"
                       id="name"
                       required
-                    />
+                    />  
+                    <p class = "error">{formErrors.name}</p>
+                    
                   </div>
+
                   <div class="inputBox">
                     <label for="email">Email: </label>
+                   
                   </div>
                   <div class="inputBox">
                     <input onChange ={handleChange}
@@ -85,6 +138,7 @@ function Contact() {
                       id="email"
                       required
                     />
+                     <p class = "error">{formErrors.email}</p>
                   </div>
                   <textarea onChange ={handleChange}
                     name= "message"
@@ -95,6 +149,7 @@ function Contact() {
                     id="message"
                     required
                   ></textarea>
+                  <p class = "error">{formErrors.message}</p>
                   <input onClick={handleClick}
                     type="submit"
                     class="btn"

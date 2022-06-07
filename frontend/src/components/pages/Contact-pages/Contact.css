@@ -20,6 +20,19 @@
   background: darkgray;
 }
 
+.error{
+  color: red;
+  font-style: italic;
+}
+
+.suc{
+  color: green;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.1rem;
+}
+
 .contact .box-container {
   display: flex;
   flex-wrap: wrap;
