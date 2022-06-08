@@ -4,6 +4,8 @@ import Footer from '../../Footer';
 import Navbar from '../../Navbar';
 import './Contact.css'
 import axios from "axios"
+import swal from 'sweetalert';
+import {useNavigate} from 'react-router-dom';
 
 function Contact() {
 
@@ -38,6 +40,8 @@ function Contact() {
      
   }
 
+  let navigate = useNavigate();
+
   useEffect(()=> {
     
      if(Object.keys(formErrors).length === 0 && isSubmit){
@@ -47,7 +51,16 @@ function Contact() {
         email: input.email,
         message: input.message
       }
-      
+      swal({
+        title: "Messege Sent!",
+        icon: "success",
+        button: "Okay",
+      }).then((done) => {
+        if (done) {
+          
+          navigate("/");
+        }
+      });
       axios.post('http://localhost:3001/create', newContact)
    
      }
@@ -100,9 +113,6 @@ function Contact() {
         <div class="box-container">
           <div class="box">
             <div class="content">
-              {(Object.keys(formErrors).length === 0 && isSubmit) ? 
-              (<div class = "suc"> Message sent successfully </div>) : 
-              (<div class = "suc"> &nbsp; </div>)}
               <h3>For any type of query, fill up this form!</h3>
               
               <div class="row">

@@ -29,6 +29,7 @@ function Registration_Form_Vaccine_Staff() {
 
   function handleChange (e) {
     const {name, value} = e.target;
+    
     setUser(prevUser => {
       return{
       ...prevUser,
@@ -71,7 +72,7 @@ function Registration_Form_Vaccine_Staff() {
           title: "Registration Done!",
           text: "Now, Please login!",
           icon: "success",
-          button: "Ok",
+          button: "Okay",
         }).then((done) => {
           if (done) {
             
@@ -100,14 +101,14 @@ function Registration_Form_Vaccine_Staff() {
     errors.firstname = "* First name is required!";
   }
   else if(!nameRegex.test(values.firstname)){
-    errors.name = "* First name is not valid";
+    errors.firstname = "* First name is not valid";
   }
 
   if(!values.lastname){
     errors.lastname = "* Last name is required!";
   }
   else if(!nameRegex.test(values.lastname)){
-    errors.name = "* Last name is not valid";
+    errors.lastname = "* Last name is not valid";
   }
 
   if(!values.Vregid){
@@ -183,7 +184,7 @@ function Registration_Form_Vaccine_Staff() {
         <div class="user-details">
           <div class="input-box">
             <span class="details">First Name </span>
-            <input type="text" name="firstname" value={user.firstname} placeholder="Enter your First name" id="firstname" onChange={ handleChange } required/>
+            <input type="text" name="firstname" value={user.firstname} placeholder="Enter your First name" id="firstname" onChange={ handleChange } autoComplete='off' required/>
             <p class = "error">{formErrors.firstname}</p>
           </div>
           <div class="input-box">
@@ -193,12 +194,12 @@ function Registration_Form_Vaccine_Staff() {
           </div>
           <div class="input-box">
             <span class="details">Vaccine Staff Register ID</span>
-            <input type="text" name="Vregid" value={user.Vregid} placeholder="Enter your Register ID" id="Vregid" onChange={ handleChange } required/>
+            <input type="text" name="Vregid" value={user.Vregid} placeholder="Enter your Register ID" id="Vregid" onChange={ handleChange }autoComplete='off' required/>
             <p class = "error">{formErrors.Vregid}</p>
           </div>
           <div class="input-box">
             <span class="details">NID</span>
-            <input type="text" name="nid" value={user.nid}  placeholder="Enter your NID" id="nid" onChange={ handleChange } required/>
+            <input type="text" name="nid" value={user.nid}  placeholder="Enter your NID" id="nid" onChange={ handleChange } autoComplete='off' required/>
             <p class = "error">{formErrors.nid}</p>
           </div>
           <div class="input-box">
@@ -208,12 +209,12 @@ function Registration_Form_Vaccine_Staff() {
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
-            <input type="text" name="phonenumber" value={user.phonenumber}  placeholder="Enter your number" id="phonenumber" onChange={ handleChange } required/>
+            <input type="text" name="phonenumber" value={user.phonenumber}  placeholder="Enter your number" id="phonenumber" onChange={ handleChange } autoComplete='off' required/>
             <p class = "error">{formErrors.phonenumber}</p>
           </div>
           <div class="input-box">
             <span class="details">Hospital Name</span>
-            <input type="text" name="hospitalname" value={user.hospitalname} placeholder="Enter hospital name" id= "hospitalname" onChange={ handleChange } required/>
+            <input type="text" name="hospitalname" value={user.hospitalname} placeholder="Enter hospital name" id= "hospitalname" autoComplete='off' onChange={ handleChange } required/>
             <p class = "error">{formErrors.hospitalname}</p>
           </div>
           <div class="input-box">
