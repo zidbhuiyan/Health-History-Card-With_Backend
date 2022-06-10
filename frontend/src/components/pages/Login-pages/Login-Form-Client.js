@@ -6,9 +6,9 @@ import Navbar from '../../Navbar';
 import './Login-Form.css'
 
 function Login_Form_Client() {
+
   const [user, setUser] = useState({
-    birthid: "",
-    nid: "",
+    hid: "",
     password: "",
     })
   
@@ -27,11 +27,10 @@ function Login_Form_Client() {
       NavPage="other"/>
 
     <div className="center">
-      
       <h1>Login As Client</h1>
       <form>
         <div className="txt_field">
-          <input type="text" name="birthid" value={user.birthid} onChange={handleChange} required/>
+          <input type="text" name="hid" value={user.hid} onChange={handleChange} required/>
           <span></span>
           <label>Enter Health ID</label>
         </div>
