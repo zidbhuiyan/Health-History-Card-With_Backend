@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/pages/Home';
@@ -26,18 +26,23 @@ import Vaccine_Staff_Profile from './components/pages/Vaccine-Staff-pages/Vaccin
 
 
 function App() {
+
+  const [ user, setClientLoginUser] = useState({})
+
+  console.log(user)
+
   return (
     <>
       <Router>
         
         <Routes>
-        <Route path='/' exact element={<Home/>}/>
+        <Route path='/' exact element={user && user._id ? <Profile/> : <Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/registration' element={<Registration/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/service' element={<Service/>}/>
-        <Route path='/login_form_client' element={<Login_Form_Client/>}/>
+        <Route path='/login_form_client' element={<Login_Form_Client setClientLoginUser={setClientLoginUser}/>}/>
         <Route path='/login_form_doctor' element={<Login_Form_Doctor/>}/>
         <Route path='/login_form_report_staff' element={<Login_Form_Report_Staff/>}/>
         <Route path='/login_form_vaccine_staff' element={<Login_Form_Vaccine_Staff/>}/>
@@ -56,8 +61,8 @@ function App() {
         <Route path='/vaccine_staff_profile' element={<Vaccine_Staff_Profile/>}/>
         
 
-        <Route path='/profile' element={<Profile/>}/>
-        <Route path='/print_card' element={<Print_card/>}/>
+        <Route path='/profile' element={user && user._id ? <Profile/> : <Home/>}/>
+        <Route path='/print_card' element={user && user._id ? <Print_card/> : <Home/>}/>
         </Routes>
       </Router>
     </>

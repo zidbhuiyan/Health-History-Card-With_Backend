@@ -6,6 +6,7 @@ import Info_Navbar from '../../Info_Navbar';
 import Navbar from '../../Navbar';
 
 function Profile(props) {
+
     return (
       <>
        <div class ="bgpc">

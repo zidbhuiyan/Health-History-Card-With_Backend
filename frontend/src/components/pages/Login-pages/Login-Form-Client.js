@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
 import '../../../App';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Footer from '../../Footer';
 import Navbar from '../../Navbar';
 import './Login-Form.css'
 import axios from 'axios';
 
-function Login_Form_Client() {
+const Login_Form_Client = ({ setClientLoginUser }) => {
+
+ const navigate = useNavigate();
 
   const [user, setUser] = useState({
     hid: "",
@@ -21,6 +23,22 @@ function Login_Form_Client() {
     })
     
   }
+
+
+  function handleClick(event) {
+
+    event.preventDefault();
+
+    axios.post('http://localhost:3001/clientLogin', user)
+    .then(res => {
+      alert(res.data.message)
+      setClientLoginUser(res.data.user)
+      navigate("/",{state:{
+        user_id: user.hid,
+      }})
+    })
+  }
+
   return (
     <>
       <div className='bgg'>
@@ -41,7 +59,7 @@ function Login_Form_Client() {
           <label>Enter Password</label>
         </div>
         
-        <input type="submit" value="Login"/>
+        <input type="submit" onClick={handleClick} value="Login"/>
         <div className="signup_link">
         Not Registered? <Link to='/registration'>Register Here</Link>
         </div>
