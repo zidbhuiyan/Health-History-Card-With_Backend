@@ -31,6 +31,7 @@ function Registration_Form() {
 
     const [formErrors , setFormErrors] =useState({});
     const [isSubmit , setIsSubmit] =useState(false);
+    const errors = {};
 
   function handleChange (e) {
     const {name, value} = e.target;
@@ -87,20 +88,44 @@ function Registration_Form() {
         emergphonenumber: user.emergphonenumber
         }
 
+        var result = "";
+
         if(user.firstname && user.lastname && user.birthid && user.dateofbirth && user.hid && user.fathersname && user.mothersname && user.fathersnid && user.mothersnid && user.gender && user.password && user.confirmpassword && user.presentaddress && user.permanentaddress && user.emergphonenumber ){
-          swal({
-            title: "Registration Done!",
-            text: "Now, Please login!",
-            icon: "success",
-            button: "Okay",
-          }).then((done) => {
-            if (done) {
-              
-              navigate("/login_form_client");
-            }
-          });
+          
           axios.post('http://localhost:3001/create1', newClient)
-          .then( res => console.log(res))
+          .then( res => {
+  
+            result = (res.data.message)
+
+            if(result == "regDone"){
+              swal({
+                title: "Registration Done!",
+                text: "Now, Please login!",
+                icon: "success",
+                button: "Okay",
+              }).then((done) => {
+                if (done) {
+                  navigate("/login_form_client");
+                }
+              });
+            }
+            else if(result == "userBidExist"){
+              swal({
+                title: "Birth ID alraedy Exist!",
+                text: "Please, Check again",
+                icon: "warning",
+                button: "Okay",
+              });
+            }
+            else if(result == "userNidExist"){
+              swal({
+                title: "National ID alraedy Exist!",
+                text: "Please, Check again",
+                icon: "warning",
+                button: "Okay",
+              });
+            }
+        })
         }
       
     }
@@ -108,7 +133,7 @@ function Registration_Form() {
 
  const validate = (values) =>{
 
-  const errors = {};
+  
 
   var nameRegex = /^[a-zA-Z ]{2,30}$/;
   var numReg = /^\d+$/;
