@@ -5,8 +5,9 @@ import Footer from '../../Footer';
 import Navbar from '../../Navbar';
 import './Login-Form.css'
 import axios from 'axios';
+import swal from 'sweetalert';
 
-const Login_Form_Client = ({ setClientLoginUser }) => {
+const Login_Form_Client = () => {
 
  const navigate = useNavigate();
 
@@ -24,6 +25,7 @@ const Login_Form_Client = ({ setClientLoginUser }) => {
     
   }
 
+  var result = "";
 
   function handleClick(event) {
 
@@ -31,11 +33,29 @@ const Login_Form_Client = ({ setClientLoginUser }) => {
 
     axios.post('http://localhost:3001/clientLogin', user)
     .then(res => {
-      alert(res.data.message)
-      setClientLoginUser(res.data.user)
-      navigate("/",{state:{
-        user_id: user.hid,
-      }})
+      result = (res.data.message)
+
+      if(result == "logindone"){
+       
+            navigate("/profile");
+         
+      }
+      else if(result == "passwordisIncorrect"){
+        swal({
+          title: "Password is Invalid!",
+          text: "Please, Check again",
+          icon: "warning",
+          button: "Okay",
+        });
+      }
+      else if(result == "userDoesNotExist"){
+        swal({
+          title: "User Does Not Exist!",
+          text: "Please, Register First",
+          icon: "warning",
+          button: "Okay",
+        });
+      }
     })
   }
 

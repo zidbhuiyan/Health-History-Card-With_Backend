@@ -10,11 +10,11 @@ router.route("/clientLogin").post((req, res) =>{
         if(user){
 
             if(password === user.password){
-                res.send({message: "login done", user: user})
+                res.send({message: "logindone", user: user})
             }
 
             else{
-                res.send({message: "PasswordisIncorrect"}) 
+                res.send({message: "passwordisIncorrect"}) 
             }
 
         }

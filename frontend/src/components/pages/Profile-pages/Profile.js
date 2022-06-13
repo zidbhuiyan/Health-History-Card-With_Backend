@@ -5,7 +5,7 @@ import Footer from '../../Footer';
 import Info_Navbar from '../../Info_Navbar';
 import Navbar from '../../Navbar';
 
-function Profile(props) {
+const Profile = () => {
 
     return (
       <>
