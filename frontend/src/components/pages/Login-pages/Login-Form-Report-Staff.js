@@ -29,15 +29,17 @@ function Login_Form_Report_Staff() {
 
     event.preventDefault();
 
-    console.log(user)
-
     axios.post('http://localhost:3001/reportStaffLogin', user)
     .then(res => {
       result = (res.data.message)
       
       if(result == "logindone"){
        
-        navigate("/report_staff_home");
+        navigate("/report_staff_home",{
+          state:{
+            user: res.data.user,
+          }
+        });
       }
 
       else if(result == "passwordisIncorrect"){
