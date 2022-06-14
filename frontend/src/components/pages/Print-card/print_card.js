@@ -4,18 +4,26 @@ import '../../../App.css';
 import Footer from '../../Footer';
 import Navbar from '../../Navbar';
 import './print_card.css'
+import {useLocation} from 'react-router-dom';
 
 const Print_card = () => {
+
+  const location = useLocation()
+  console.log(location.state)
+
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
   });
 
+
     return (
       <>
       <div class ="bgpc">
         <Navbar
-        NavPage='profile'/>
+        NavPage='profile'
+        user = {location.state.user}
+        page = 'print_card'/>
 
 <div class="container">
   
@@ -33,13 +41,13 @@ const Print_card = () => {
                     </div>
                     <div class="bottom">
                         <p class="left">Health ID:</p>
-                        <p class="left_desi">1911201642</p>
+                        <p class="left_desi">{location.state.user.hid}</p>
                         <p class="left">Name:</p>
-                        <p class="left_desi">Zihadul Islam</p>
+                        <p class="left_desi">{location.state.user.firstname} {location.state.user.lastname}</p>
                         <p class="right">Gender:</p>
-                        <p class="right_desi">Male</p>
+                        <p class="right_desi">{location.state.user.gender}</p>
                         <p class="right">Date of Birth:</p>
-                        <p class="right_desi">11/11/11</p>
+                        <p class="right_desi">{location.state.user.dateofbirth}</p>
                     </div>
                 </div> 
 
@@ -51,14 +59,14 @@ const Print_card = () => {
                 <div class="qr_image">
                         <img src="https://www.investopedia.com/thmb/ZG1jKEKttKbiHi0EkM8yJCJp6TU=/1148x1148/filters:no_upscale():max_bytes(150000):strip_icc()/qr-code-bc94057f452f4806af70fd34540f72ad.png" alt='Photo'/>
                     </div>
-                        <p class="left">Email:</p>
-                        <p class="left_desi">email@email.com</p>
+                        <p class="left">Phone Number:</p>
+                        <p class="left_desi">{location.state.user.phonenumber}</p>
                         <p class="left">Blood Group:</p>
                         <p class="left_desi">AB +ve</p>
                         <p class="left">Diseases:</p>
                         <p class="left_desi">Diabetes</p>
                         <p class="center_desi"><b>Emergency Number</b></p>
-                        <p class="center_desi">01621964493</p>
+                        <p class="center_desi">{location.state.user.phonenumber}</p>
                     </div>
                 </div>
       </div>

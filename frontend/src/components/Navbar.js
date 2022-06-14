@@ -6,7 +6,7 @@ import './Navbar.css';
 function Navbar(props) {
 
   const ToggleMenuPage = () =>{
-    console.log(props);
+
     if(props.NavPage == "Home"){
       return(
         <>
@@ -52,16 +52,16 @@ function Navbar(props) {
 
   const RenderMenu = () =>{
     if(props.NavPage == "profile"){
-      console.log(props)
+    
       return(
         <>
        <li className='nav-item'>
-                 <Link  to='/profile' className='nav-links' onClick={closeMobileMenu}>
+                 <Link  to='/profile'  className='nav-links' state={{  user: props.user }} onClick={closeMobileMenu}>
                    Profile
                  </Link>
                </li>
                <li className='nav-item'>
-                 <Link  to='/print_card' className='nav-links' onClick={closeMobileMenu}>
+                 <Link  to='/print_card' className='nav-links' state={{  user: props.user }} onClick={closeMobileMenu}>
                    Print Card
                  </Link>
                </li>
@@ -112,7 +112,7 @@ function Navbar(props) {
 
   const LogoToggle = () =>{
     if(props.NavPage == "profile"){
-      console.log(props)
+      
       return(
         <>
        <Link to='/profile' className='navbar-logo' onClick={closeMobileMenu}>

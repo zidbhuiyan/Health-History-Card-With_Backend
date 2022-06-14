@@ -37,7 +37,11 @@ const Login_Form_Client = () => {
 
       if(result == "logindone"){
        
-            navigate("/profile");
+            navigate("/profile",{
+              state:{
+                user: res.data.user,
+              }
+            });
          
       }
       else if(result == "passwordisIncorrect"){
