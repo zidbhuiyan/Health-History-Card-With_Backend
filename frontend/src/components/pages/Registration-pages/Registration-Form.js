@@ -111,7 +111,7 @@ function Registration_Form() {
             }
             else if(result == "userBidExist"){
               swal({
-                title: "Birth ID alraedy Exist!",
+                title: "Birth ID already Exist!",
                 text: "Please, Check again",
                 icon: "warning",
                 button: "Okay",
@@ -119,7 +119,7 @@ function Registration_Form() {
             }
             else if(result == "userNidExist"){
               swal({
-                title: "National ID alraedy Exist!",
+                title: "National ID already Exist!",
                 text: "Please, Check again",
                 icon: "warning",
                 button: "Okay",
