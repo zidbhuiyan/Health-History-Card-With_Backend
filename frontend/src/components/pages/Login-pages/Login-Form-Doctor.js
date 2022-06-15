@@ -7,7 +7,8 @@ import './Login-Form.css'
 import axios from 'axios';
 import swal from 'sweetalert';
 
-function Login_Form_Doctor() {
+function Login_Form_Doctor(props) {
+  
   const navigate = useNavigate();
 
   const [user, setUser] = useState({
@@ -38,7 +39,11 @@ function Login_Form_Doctor() {
       
       if(result == "logindone"){
        
-        navigate("/doctor_home");
+        navigate("/doctor_home",{
+          state:{
+            user: res.data.user,
+          }
+        });
       }
 
       else if(result == "passwordisIncorrect"){
