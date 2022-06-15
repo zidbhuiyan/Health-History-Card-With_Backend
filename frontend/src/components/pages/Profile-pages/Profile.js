@@ -45,7 +45,7 @@ const Profile = () => {
             <input type="text" name="nid" value = {location.state.user.nid} disabled/>
           </div>
           <div class="input-box">
-            <span class="details">Date of Birth(DD/MM/YYYY)</span>
+            <span class="details">Date of Birth(YYYY/MM/DD)</span>
             <input type="text" name="dateofbirth" value = {location.state.user.dateofbirth}  disabled/>
           </div>
           <div class="input-box">

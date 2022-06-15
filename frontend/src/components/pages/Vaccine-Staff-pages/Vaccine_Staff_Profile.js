@@ -10,6 +10,7 @@ function Vaccine_Staff_Profile(props) {
 
     return (
       <>
+      <div class="bgvsp">
         <Vaccine_Staff_Navbar
         user = {location.state.user}/>
 
@@ -36,7 +37,7 @@ function Vaccine_Staff_Profile(props) {
             <input type="text" value = {location.state.user.nid} disabled/>
           </div>
           <div class="input-box">
-            <span class="details">Date of Birth(MM/DD/YYYY)</span>
+            <span class="details">Date of Birth(YYYY/MM/DD)</span>
             <input type="text" value = {location.state.user.dateofbirth} disabled/>
           </div>
           <div class="input-box">
@@ -54,6 +55,7 @@ function Vaccine_Staff_Profile(props) {
         </div>
       </form>
     </div>
+  </div>
   </div>
         
         <Footer/>

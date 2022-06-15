@@ -178,32 +178,32 @@ function Registration_Form_Doctor() {
         <div class="user-details">
           <div class="input-box">
             <span class="details">First Name</span>
-            <input type="text" name="Dfirstname" value={user.Dfirstname} placeholder="Enter your First name" id="Dfirstname" onChange={ handleChange } required/>
+            <input type="text" name="Dfirstname" value={user.Dfirstname} placeholder="Enter First name" id="Dfirstname" onChange={ handleChange } required/>
             <p class = "error">{formErrors.firstname}</p>
           </div>
           <div class="input-box">
             <span class="details">Last name</span>
-            <input type="text" name="Dlastname" value={user.Dlastname}  placeholder="Enter your Last name" id="Dlastname" onChange={ handleChange } required/>
+            <input type="text" name="Dlastname" value={user.Dlastname}  placeholder="Enter Last name" id="Dlastname" onChange={ handleChange } required/>
             <p class = "error">{formErrors.lastname}</p>
           </div>
           <div class="input-box">
             <span class="details">Doctor Register ID</span>
-            <input type="text" name="Docregid" value={user.Docregid} placeholder="Enter your Register ID" id="Docregid" onChange={ handleChange } required/>
+            <input type="text" name="Docregid" value={user.Docregid} placeholder="Enter Register ID" id="Docregid" onChange={ handleChange } required/>
             <p class = "error">{formErrors.regid}</p>
           </div>
           <div class="input-box">
             <span class="details">NID</span>
-            <input type="text" name="Dnid" value={user.Dnid}  placeholder="Enter your NID" id="Dnid" onChange={ handleChange } required/>
+            <input type="text" name="Dnid" value={user.Dnid}  placeholder="Enter NID" id="Dnid" onChange={ handleChange } required/>
             <p class = "error">{formErrors.nid}</p>
           </div>
           <div class="input-box">
             <span class="details">Date of Birth(MM/DD/YYYY)</span>
-            <input type="date" name="Ddateofbirth" value={user.Ddateofbirth}  placeholder="Enter your Date of Birth" id="Ddateofbirth" onChange={ handleChange } required/>
+            <input type="date" name="Ddateofbirth" value={user.Ddateofbirth}  placeholder="Enter Date of Birth" id="Ddateofbirth" onChange={ handleChange } required/>
             <p class = "error">{formErrors.dateofbirth}</p>
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
-            <input type="text" name="Dphonenumber" value={user.Dphonenumber}  placeholder="Enter your number" id="Dphonenumber" onChange={ handleChange } required/>
+            <input type="text" name="Dphonenumber" value={user.Dphonenumber}  placeholder="Enter Phone Number" id="Dphonenumber" onChange={ handleChange } required/>
             <p class = "error">{formErrors.phonenumber}</p>
           </div>
           <div class="input-box">
@@ -223,12 +223,12 @@ function Registration_Form_Doctor() {
           </div>
           <div class="input-box">
             <span class="details">Password</span>
-            <input type="password" name="Dpassword" value={user.Dpassword} placeholder="Enter your password" id="Dpassword" onChange={ handleChange } required/>
+            <input type="password" name="Dpassword" value={user.Dpassword} placeholder="Enter password" id="Dpassword" onChange={ handleChange } required/>
             <p class = "error">{formErrors.password}</p>
           </div>
           <div class="input-box">
             <span class="details">Confirm Password</span>
-            <input type="password" name="Dconfirmpassword" value={user.Dconfirmpassword} placeholder="Confirm your password" id="Dconfirmpassword" onChange={ handleChange } required/>
+            <input type="password" name="Dconfirmpassword" value={user.Dconfirmpassword} placeholder="Confirm password" id="Dconfirmpassword" onChange={ handleChange } required/>
             <p class = "error">{formErrors.confirmpassword}</p>
           </div>
           

@@ -178,32 +178,32 @@ function Registration_Form_Report_Staff() {
         <div class="user-details">
           <div class="input-box">
             <span class="details">First Name</span>
-            <input type="text" name="firstname" value={user.firstname} placeholder="Enter your First name" id="firstname" onChange={ handleChange } required/>
+            <input type="text" name="firstname" value={user.firstname} placeholder="Enter First name" id="firstname" onChange={ handleChange } required/>
             <p class = "error">{formErrors.firstname}</p>
           </div>
           <div class="input-box">
             <span class="details">Last name</span>
-            <input type="text" name="lastname" value={user.lastname}  placeholder="Enter your Last name" id="lastname" onChange={ handleChange } required/>
+            <input type="text" name="lastname" value={user.lastname}  placeholder="Enter Last name" id="lastname" onChange={ handleChange } required/>
             <p class = "error">{formErrors.lastname}</p>
           </div>
           <div class="input-box">
             <span class="details">Report Staff Register ID</span>
-            <input type="text" name="Rregid" value={user.Rregid} placeholder="Enter your Register ID" id="Rregid" onChange={ handleChange } required/>
+            <input type="text" name="Rregid" value={user.Rregid} placeholder="Enter Register ID" id="Rregid" onChange={ handleChange } required/>
             <p class = "error">{formErrors.Rregid}</p>
           </div>
           <div class="input-box">
             <span class="details">NID</span>
-            <input type="text" name="nid" value={user.nid}  placeholder="Enter your NID" id="nid" onChange={ handleChange } required/>
+            <input type="text" name="nid" value={user.nid}  placeholder="Enter NID" id="nid" onChange={ handleChange } required/>
             <p class = "error">{formErrors.nid}</p>
           </div>
           <div class="input-box">
             <span class="details">Date of Birth(MM/DD/YYYY)</span>
-            <input type="date" name="dateofbirth" value={user.dateofbirth}  placeholder="Enter your Date of Birth" id="dateofbirth" onChange={ handleChange } required/>
+            <input type="date" name="dateofbirth" value={user.dateofbirth}  placeholder="Enter Date of Birth" id="dateofbirth" onChange={ handleChange } required/>
             <p class = "error">{formErrors.dateofbirth}</p>
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
-            <input type="text" name="phonenumber" value={user.phonenumber}  placeholder="Enter your number" id="phonenumber" onChange={ handleChange } required/>
+            <input type="text" name="phonenumber" value={user.phonenumber}  placeholder="Enter Phone number" id="phonenumber" onChange={ handleChange } required/>
             <p class = "error">{formErrors.phonenumber}</p>
           </div>
           <div class="input-box">
@@ -223,12 +223,12 @@ function Registration_Form_Report_Staff() {
           </div>
           <div class="input-box">
             <span class="details">Password</span>
-            <input type="password" name="password" value={user.password} placeholder="Enter your password" id="password" onChange={ handleChange } required/>
+            <input type="password" name="password" value={user.password} placeholder="Enter password" id="password" onChange={ handleChange } required/>
             <p class = "error">{formErrors.password}</p>
           </div>
           <div class="input-box">
             <span class="details">Confirm Password</span>
-            <input type="password" name="confirmpassword" value={user.confirmpassword} placeholder="Confirm your password" id="confirmpassword" onChange={ handleChange } required/>
+            <input type="password" name="confirmpassword" value={user.confirmpassword} placeholder="Confirm password" id="confirmpassword" onChange={ handleChange } required/>
             <p class = "error">{formErrors.confirmpassword}</p>
           </div>
           

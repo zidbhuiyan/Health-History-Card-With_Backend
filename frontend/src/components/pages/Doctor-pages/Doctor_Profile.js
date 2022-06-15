@@ -10,6 +10,8 @@ function Doctor_Profile(props) {
 
     return (
       <>
+
+<div className='bgdp'>
         <Doctor_Navbar
         user = {location.state.user}/>
 
@@ -36,7 +38,7 @@ function Doctor_Profile(props) {
             <input type="text" value = {location.state.user.Dnid} disabled/>
           </div>
           <div class="input-box">
-            <span class="details">Date of Birth(MM/DD/YYYY)</span>
+            <span class="details">Date of Birth(YYYY/MM/DD)</span>
             <input type="text" value = {location.state.user.Ddateofbirth} disabled/>
           </div>
           <div class="input-box">
@@ -56,6 +58,7 @@ function Doctor_Profile(props) {
         </div>
       </form>
     </div>
+  </div>
   </div>
         
         <Footer/>
