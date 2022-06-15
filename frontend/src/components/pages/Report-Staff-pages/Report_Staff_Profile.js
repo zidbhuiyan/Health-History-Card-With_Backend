@@ -5,7 +5,9 @@ import Report_Staff_Navbar from './Report_Staff_Navbar';
 import {useLocation} from 'react-router-dom';
 
 function Report_Staff_Profile(props) {
+
   const location = useLocation();
+  
     return (
       <>
 

@@ -115,7 +115,7 @@ function Navbar(props) {
       
       return(
         <>
-       <Link to='/profile' className='navbar-logo' onClick={closeMobileMenu}>
+       <Link to='/profile' state={{  user: props.user }} className='navbar-logo' onClick={closeMobileMenu}>
        <i class="fa fa-id-card" aria-hidden="true"></i>
         Medical History Card
        </Link>

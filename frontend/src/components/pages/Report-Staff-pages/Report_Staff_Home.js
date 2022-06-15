@@ -7,7 +7,9 @@ import'./Report_Staff_Home.css'
 import {useLocation} from 'react-router-dom';
 
 function Report_Staff_Home() {
+
   const location = useLocation();
+  
   return (
     <>
     <div className='bgRepStf'>

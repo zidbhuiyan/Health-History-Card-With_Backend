@@ -62,9 +62,9 @@ const Print_card = () => {
                         <p class="left">Phone Number:</p>
                         <p class="left_desi">{location.state.user.phonenumber}</p>
                         <p class="left">Blood Group:</p>
-                        <p class="left_desi">AB +ve</p>
+                        <p class="left_desi">---</p>
                         <p class="left">Diseases:</p>
-                        <p class="left_desi">Diabetes</p>
+                        <p class="left_desi">----</p>
                         <p class="center_desi"><b>Emergency Number</b></p>
                         <p class="center_desi">{location.state.user.phonenumber}</p>
                     </div>

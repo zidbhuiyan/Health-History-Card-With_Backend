@@ -5,6 +5,7 @@ import HeroSection from '../Herosection';
 import Navbar from '../Navbar';
 
 function Home() {
+
   return (
     <>
       <Navbar NavPage='Home'/>

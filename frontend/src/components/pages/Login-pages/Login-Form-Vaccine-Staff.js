@@ -38,7 +38,11 @@ function Login_Form_Vaccine_Staff() {
       
       if(result == "logindone"){
        
-        navigate("/vaccine_staff_home");
+        navigate("/vaccine_staff_home",{
+          state:{
+            user: res.data.user,
+          }
+        });
       }
 
       else if(result == "passwordisIncorrect"){
