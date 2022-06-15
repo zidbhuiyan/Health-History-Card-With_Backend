@@ -5,6 +5,7 @@ import Footer from '../../Footer';
 import Navbar from '../../Navbar';
 import './print_card.css'
 import {useLocation} from 'react-router-dom';
+import {QRCodeSVG} from 'qrcode.react';
 
 const Print_card = () => {
 
@@ -57,7 +58,15 @@ const Print_card = () => {
                 
                 <div class="details-info">
                 <div class="qr_image">
-                        <img src="https://www.investopedia.com/thmb/ZG1jKEKttKbiHi0EkM8yJCJp6TU=/1148x1148/filters:no_upscale():max_bytes(150000):strip_icc()/qr-code-bc94057f452f4806af70fd34540f72ad.png" alt='Photo'/>
+
+                  <div class = "img">
+                  <QRCodeSVG size={100} 
+                             bgColor={"#ffffff"}
+                             fgColor={"#000000"}
+                             level={"L"} 
+                             value= {location.state.user.hid} />
+                  </div>
+                        
                     </div>
                         <p class="left">Phone Number:</p>
                         <p class="left_desi">{location.state.user.phonenumber}</p>

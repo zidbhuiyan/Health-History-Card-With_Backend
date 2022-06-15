@@ -160,23 +160,27 @@
 }
 
 .qr_image{
-    height: 30%;
     width: 100%;
-    background-color: black;
+    background-color: aliceblue;
     position: relative;
+    padding: 1px;
     z-index: 5;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    margin-bottom: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
 }
 
-.qr_image img{
-    height: 90px;
-    width: 90px;
-    background-color: #e6ebe0;
-    border-radius: 5px;
+.qr_image .img{
     position: absolute;
+    border-radius: 5px;
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+
+    background-color: aliceblue;
     top: 15px;
-    left: 70%;
+    left: 65%;
 }
 
 .Details {
