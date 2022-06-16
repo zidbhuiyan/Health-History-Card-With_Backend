@@ -15,7 +15,9 @@ function Doctor_Home( props ) {
     <div className='bgdoctor'>
       <Doctor_Navbar
       user = {location.state.user}/>
-      <SearchBar/>
+      <SearchBar
+      userCat = "doctor"
+      userCatInfo = {location.state.user}/>
       <Footer/>
     </div>
     </>

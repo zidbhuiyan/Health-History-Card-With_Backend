@@ -17,6 +17,7 @@ app.use("/", require("./routes/clientLoginRoute"));
 app.use("/", require("./routes/vaccineStaffLoginRoute"));
 app.use("/", require("./routes/reportStaffLoginRoute"));
 app.use("/", require("./routes/doctorLoginRoute"));
+app.use("/", require("./routes/searchClientRoute"));
 
 app.listen(3001,function(){
     console.log("express server is running on port 3001");

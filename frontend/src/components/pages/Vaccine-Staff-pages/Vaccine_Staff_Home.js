@@ -15,7 +15,9 @@ function Vaccine_Staff_Home() {
     <div className='bgVacStf'>
       <Vaccine_Staff_Navbar
       user = {location.state.user}/>
-      <SearchBar/>
+      <SearchBar
+      userCat = "vaccineStaff"
+      userCatInfo = {location.state.user}/>
       <Footer/>
     </div>
     </>

@@ -23,6 +23,7 @@ import Report_Staff_Home from './components/pages/Report-Staff-pages/Report_Staf
 import Report_Staff_Profile from './components/pages/Report-Staff-pages/Report_Staff_Profile';
 import Vaccine_Staff_Home from './components/pages/Vaccine-Staff-pages/Vaccine_Staff_Home';
 import Vaccine_Staff_Profile from './components/pages/Vaccine-Staff-pages/Vaccine_Staff_Profile';
+import Search_profile from './components/pages/Search-profile/Search_profile';
 
 
 function App() {
@@ -58,6 +59,9 @@ function App() {
 
         <Route path='/profile' element={<Profile/>}/>
         <Route path='/print_card' element={<Print_card/>}/>
+
+        <Route path='/search_profile' element={<Search_profile/>}/>
+
         </Routes>
       </Router>
     </>

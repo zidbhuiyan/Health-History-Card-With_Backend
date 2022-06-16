@@ -60,7 +60,8 @@ const Profile = () => {
         </div>
       </form>
       <div class="title">Medical Information</div>
-      <Info_Navbar/>  
+      <Info_Navbar
+      userCat = "client"/>  
     </div>
   </div>
  

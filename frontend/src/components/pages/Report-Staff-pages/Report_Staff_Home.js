@@ -15,7 +15,9 @@ function Report_Staff_Home() {
     <div className='bgRepStf'>
       <Report_Staff_Navbar
        user = {location.state.user}/>
-      <SearchBar/>
+      <SearchBar
+      userCat = "reportStaff"
+      userCatInfo = {location.state.user}/>
       <Footer/>
     </div>
     </>
