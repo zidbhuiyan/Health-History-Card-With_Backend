@@ -7,7 +7,7 @@ import './Login-Form.css'
 import axios from 'axios';
 import swal from 'sweetalert';
 
-const Login_Form_Client = () => {
+const Login_Form_Client = (props) => {
 
  const navigate = useNavigate();
 
@@ -42,6 +42,13 @@ const Login_Form_Client = () => {
                 user: res.data.user,
               }
             });
+
+            const storeobj = {
+                type: "Client",
+                login: true
+            }
+            
+            props.updateUser(storeobj)
          
       }
       else if(result == "passwordisIncorrect"){

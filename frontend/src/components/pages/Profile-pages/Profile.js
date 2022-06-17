@@ -6,9 +6,13 @@ import Info_Navbar from '../../Info_Navbar';
 import Navbar from '../../Navbar';
 import {useLocation} from 'react-router-dom';
 
-const Profile = () => {
+const Profile = (props) => {
 
   const location = useLocation();
+  
+  if(!localStorage.getItem("Myuser")){
+    window.location.reload(false);
+  }
 
     return (
       <>
@@ -70,6 +74,7 @@ const Profile = () => {
         </div>
       </>
     );
+
   }
   
   export default Profile;

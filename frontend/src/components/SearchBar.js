@@ -9,8 +9,6 @@ function SearchBar(props) {
 
   const navigate = useNavigate();
 
-  console.log(props.userCat);
-
   const [user, setUser] = useState({
     hid: "",
     category: props.userCat,

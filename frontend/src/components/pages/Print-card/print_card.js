@@ -10,7 +10,6 @@ import {QRCodeSVG} from 'qrcode.react';
 const Print_card = () => {
 
   const location = useLocation()
-  console.log(location.state)
 
   const componentRef = useRef();
   const handlePrint = useReactToPrint({

@@ -7,7 +7,7 @@ import './Login-Form.css'
 import axios from 'axios';
 import swal from 'sweetalert';
 
-function Login_Form_Report_Staff() {
+function Login_Form_Report_Staff(props) {
   const navigate = useNavigate();
 
   const [user, setUser] = useState({
@@ -34,6 +34,14 @@ function Login_Form_Report_Staff() {
       result = (res.data.message)
       
       if(result == "logindone"){
+
+        const storeobj = {
+          type: "ReportStaff",
+          login: true
+      }
+
+      localStorage.setItem("Myuser",JSON.stringify(storeobj))
+      props.setLoginUser(storeobj)
        
         navigate("/report_staff_home",{
           state:{

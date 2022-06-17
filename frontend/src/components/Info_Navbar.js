@@ -12,11 +12,6 @@ function Info_Navbar(props) {
     setValue(newValue) 
   }
 
-  console.log(value);
-  console.log(props.userCat);
-
-
-
    
   if(props.userCat === "vaccineStaff"){
     function TabPanel(){

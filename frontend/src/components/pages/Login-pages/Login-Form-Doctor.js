@@ -38,7 +38,15 @@ function Login_Form_Doctor(props) {
       result = (res.data.message)
       
       if(result == "logindone"){
-       
+        
+        const storeobj = {
+          type: "Doctor",
+          login: true
+      }
+
+      localStorage.setItem("Myuser",JSON.stringify(storeobj))
+      props.setLoginUser(storeobj)
+
         navigate("/doctor_home",{
           state:{
             user: res.data.user,

@@ -7,7 +7,7 @@ import './Login-Form.css'
 import axios from 'axios';
 import swal from 'sweetalert';
 
-function Login_Form_Vaccine_Staff() {
+function Login_Form_Vaccine_Staff(props) {
 
   const navigate = useNavigate();
 
@@ -37,6 +37,14 @@ function Login_Form_Vaccine_Staff() {
       result = (res.data.message)
       
       if(result == "logindone"){
+
+        const storeobj = {
+          type: "VaccineStaff",
+          login: true
+      }
+
+      localStorage.setItem("Myuser",JSON.stringify(storeobj))
+      props.setLoginUser(storeobj)
        
         navigate("/vaccine_staff_home",{
           state:{

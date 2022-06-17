@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar(props) {
+
+  const navigate = useNavigate();
 
   const ToggleMenuPage = () =>{
 
@@ -66,9 +68,9 @@ function Navbar(props) {
                  </Link>
                </li>
                <li>
-         <a href="/">
-         <Button buttonStyle='btn--outline'>Logout</Button>
-        </a>
+        
+         <Button onClick={logout} buttonStyle='btn--outline'>Logout</Button>
+       
         </li>
       </>
       )
@@ -111,8 +113,8 @@ function Navbar(props) {
   }
 
   const LogoToggle = () =>{
+   
     if(props.NavPage == "profile"){
-      
       return(
         <>
        <Link to='/profile' state={{  user: props.user }} className='navbar-logo' onClick={closeMobileMenu}>
@@ -121,16 +123,24 @@ function Navbar(props) {
        </Link>
       </>
       )
+    
+
+
     }
-   else{ return(
-       <>
-       <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+    else{
+      return(
+        <>
+       <Link to='/' state={{  user: props.user }} className='navbar-logo' onClick={closeMobileMenu}>
        <i class="fa fa-id-card" aria-hidden="true"></i>
         Medical History Card
        </Link>
-        
-       </>
-     )}
+      </>
+      )
+    
+
+    }
+
+    
  }
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
@@ -140,6 +150,11 @@ function Navbar(props) {
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  const logout = () =>{
+    localStorage.clear("Myuser")
+    navigate("/");
+  }
 
  
 
