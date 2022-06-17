@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const bcrypt = require('bcryptjs')
 const Client = require("../models/clientModel");
 
 router.route("/create1").post((req, res) =>{
@@ -34,33 +35,39 @@ router.route("/create1").post((req, res) =>{
                     res.send({message: "userNidExist"})
                 }
                 else{
-                    const newClient = new Client({
-                        firstname,
-                        lastname,
-                        birthid,
-                        nid,
-                        hid,
-                        dateofbirth,
-                        phonenumber,
-                        fathersname,
-                        fathersnid,
-                        mothersname,
-                        mothersnid,
-                        presentaddress,
-                        permanentaddress,
-                        password,
-                        confirmpassword,
-                        gender,
-                        emergphonenumber
-                     }); 
-        
-            newClient.save(err =>{
-                if(err){
-                    res.send(err)
-                } else{
-                    res.send({message: "regDone"})
-                }
-            })
+
+                    bcrypt.hash(password,12)
+                    .then(hashedpassword=>{
+
+
+                        const newClient = new Client({
+                            firstname,
+                            lastname,
+                            birthid,
+                            nid,
+                            hid,
+                            dateofbirth,
+                            phonenumber,
+                            fathersname,
+                            fathersnid,
+                            mothersname,
+                            mothersnid,
+                            presentaddress,
+                            permanentaddress,
+                            password:hashedpassword,
+                            confirmpassword:hashedpassword,
+                            gender,
+                            emergphonenumber
+                         }); 
+            
+                newClient.save(err =>{
+                    if(err){
+                        res.send(err)
+                    } else{
+                        res.send({message: "regDone"})
+                    }
+                })
+                    })
                 }
             })
         }

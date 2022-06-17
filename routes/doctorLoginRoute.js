@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const bcrypt = require('bcryptjs')
 const Doctor = require("../models/doctorModel");
 
 router.route("/doctorLogin").post((req, res) =>{
@@ -10,15 +11,18 @@ router.route("/doctorLogin").post((req, res) =>{
     Doctor.findOne({Docregid: Docregid}, (err,user) => {
         if(user){
 
-            console.log(user)
-
-            if(Dpassword === user.Dpassword){
-                res.send({message: "logindone", user: user})
-            }
-
-            else{
-                res.send({message: "passwordisIncorrect"}) 
-            }
+            bcrypt.compare(Dpassword,user.Dpassword)
+            .then(passMatch=>{
+                
+                if(passMatch){
+                    res.send({message: "logindone", user: user})
+                }
+    
+                else{
+                    res.send({message: "passwordisIncorrect"}) 
+                }
+            })
+            
 
         }
         else{

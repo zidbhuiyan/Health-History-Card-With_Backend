@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const bcrypt = require('bcryptjs')
 const Reportstaff = require("../models/reportstaffModel");
 
 router.route("/reportStaffLogin").post((req, res) =>{
@@ -10,15 +11,17 @@ router.route("/reportStaffLogin").post((req, res) =>{
     Reportstaff.findOne({Rregid: Rregid}, (err,user) => {
         if(user){
 
-            console.log(user)
-
-            if(password === user.password){
-                res.send({message: "logindone", user: user})
-            }
-
-            else{
-                res.send({message: "passwordisIncorrect"}) 
-            }
+            bcrypt.compare(password,user.password)
+            .then(passMatch=>{
+                
+                if(passMatch){
+                    res.send({message: "logindone", user: user})
+                }
+    
+                else{
+                    res.send({message: "passwordisIncorrect"}) 
+                }
+            })
 
         }
         else{

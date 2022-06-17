@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const bcrypt = require('bcryptjs')
 const Reportstaff = require("../models/reportstaffModel");
 
 router.route("/create3").post((req, res) =>{
@@ -14,20 +15,24 @@ router.route("/create3").post((req, res) =>{
     const password = req.body.password;
     const confirmpassword = req.body.confirmpassword;
 
-    const newReportstaff = new Reportstaff({
-       firstname,
-       lastname,
-       Rregid,
-       nid,
-       dateofbirth,
-       phonenumber,
-       hospitalname,
-       gender,
-       password,
-       confirmpassword
-    });
 
-    newReportstaff.save();
+    bcrypt.hash(password,12)
+                    .then(hashedpassword=>{
+                        const newReportstaff = new Reportstaff({
+                            firstname,
+                            lastname,
+                            Rregid,
+                            nid,
+                            dateofbirth,
+                            phonenumber,
+                            hospitalname,
+                            gender,
+                            password:hashedpassword,
+                            confirmpassword:hashedpassword
+                         });
+                     
+                         newReportstaff.save();
+                    })
 
 })
 

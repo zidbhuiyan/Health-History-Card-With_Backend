@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const bcrypt = require('bcryptjs')
 const Vaccinestaff = require("../models/vaccinestaffModel");
 
 router.route("/create4").post((req, res) =>{
@@ -14,20 +15,24 @@ router.route("/create4").post((req, res) =>{
     const password = req.body.password;
     const confirmpassword = req.body.confirmpassword;
 
-    const newVaccinestaff = new Vaccinestaff({
-       firstname,
-       lastname,
-       Vregid,
-       nid,
-       dateofbirth,
-       phonenumber,
-       hospitalname,
-       gender,
-       password,
-       confirmpassword
-    });
 
-    newVaccinestaff.save();
+    bcrypt.hash(password,12)
+                    .then(hashedpassword=>{
+                        const newVaccinestaff = new Vaccinestaff({
+                            firstname,
+                            lastname,
+                            Vregid,
+                            nid,
+                            dateofbirth,
+                            phonenumber,
+                            hospitalname,
+                            gender,
+                            password:hashedpassword,
+                            confirmpassword:hashedpassword
+                         });
+                     
+                         newVaccinestaff.save();
+                    })
 
 })
 

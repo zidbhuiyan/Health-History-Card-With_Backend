@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const bcrypt = require('bcryptjs')
 const Doctor = require("../models/doctorModel");
 
 router.route("/createDoc").post((req, res) =>{
@@ -14,20 +15,24 @@ router.route("/createDoc").post((req, res) =>{
     const Dpassword = req.body.Dpassword;
     const Dconfirmpassword = req.body.Dconfirmpassword;
 
-    const newDoctor = new Doctor({
-       Dfirstname,
-       Dlastname,
-       Docregid,
-       Dnid,
-       Ddateofbirth,
-       Dphonenumber,
-       hospitalname,
-       Dgender,
-       Dpassword,
-       Dconfirmpassword
-    });
 
-    newDoctor.save();
+    bcrypt.hash(Dpassword,12)
+                    .then(hashedpassword=>{
+                        const newDoctor = new Doctor({
+                            Dfirstname,
+                            Dlastname,
+                            Docregid,
+                            Dnid,
+                            Ddateofbirth,
+                            Dphonenumber,
+                            hospitalname,
+                            Dgender,
+                            Dpassword:hashedpassword,
+                            Dconfirmpassword:hashedpassword
+                         });
+                     
+                         newDoctor.save();
+                    })
 
 })
 
