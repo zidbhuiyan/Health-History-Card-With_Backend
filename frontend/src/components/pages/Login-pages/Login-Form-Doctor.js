@@ -45,7 +45,7 @@ function Login_Form_Doctor(props) {
       }
 
       localStorage.setItem("Myuser",JSON.stringify(storeobj))
-      props.setLoginUser(storeobj)
+      props.updateUser(storeobj)
 
         navigate("/doctor_home",{
           state:{
