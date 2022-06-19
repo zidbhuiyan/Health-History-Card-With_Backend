@@ -5,14 +5,16 @@ import Footer from '../../Footer';
 import Info_Navbar from '../../Info_Navbar';
 import Navbar from '../../Navbar';
 import {useLocation} from 'react-router-dom';
+import axios from 'axios';
 
 const Profile = (props) => {
 
   const location = useLocation();
-  
-  if(!localStorage.getItem("Myuser")){
+
+  if(!sessionStorage.getItem("Myuser")){
     window.location.reload(false);
   }
+
 
     return (
       <>

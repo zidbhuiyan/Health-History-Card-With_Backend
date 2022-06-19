@@ -28,18 +28,16 @@ import Search_profile from './components/pages/Search-profile/Search_profile';
 
 function App() {
 
-  const [ user, setLoginUser] = useState({})
+  const [ loginUser, setLoginUser] = useState({})
 
   useEffect(() => {
-    setLoginUser(JSON.parse(localStorage.getItem("Myuser")))
+    setLoginUser(JSON.parse(sessionStorage.getItem("Myuser")))
   }, [])
 
-  const updateUser = (user) => {
-    localStorage.setItem("Myuser", JSON.stringify(user))
-    setLoginUser(user)
+  const updateUser = (loginUser) => {
+    sessionStorage.setItem("Myuser", JSON.stringify(loginUser))
+    setLoginUser(loginUser)
   }
-
-  console.log(user);
 
 
   return (
