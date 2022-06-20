@@ -43,7 +43,6 @@ function Login_Form_Vaccine_Staff(props) {
           login: true
       }
 
-      localStorage.setItem("Myuser",JSON.stringify(storeobj))
       props.updateUser(storeobj)
        
         navigate("/vaccine_staff_home",{

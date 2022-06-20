@@ -40,7 +40,6 @@ function Login_Form_Report_Staff(props) {
           login: true
       }
 
-      localStorage.setItem("Myuser",JSON.stringify(storeobj))
       props.updateUser(storeobj)
        
         navigate("/report_staff_home",{
