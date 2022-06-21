@@ -24,6 +24,7 @@ import Report_Staff_Profile from './components/pages/Report-Staff-pages/Report_S
 import Vaccine_Staff_Home from './components/pages/Vaccine-Staff-pages/Vaccine_Staff_Home';
 import Vaccine_Staff_Profile from './components/pages/Vaccine-Staff-pages/Vaccine_Staff_Profile';
 import Search_profile from './components/pages/Search-profile/Search_profile';
+import Vaccine_Staff_Add_Vaccine from './components/pages/Vaccine-Staff-pages/Vaccine_Staff_Add_Vaccine';
 
 
 function App() {
@@ -67,6 +68,8 @@ function App() {
 
         <Route path='/vaccine_staff_home' element={<Vaccine_Staff_Home/>}/>
         <Route path='/vaccine_staff_profile' element={<Vaccine_Staff_Profile/>}/>
+        <Route path='/vaccine_staff_add_vaccine' element={<Vaccine_Staff_Add_Vaccine/>}/>
+
         
         <Route path='/profile' element={<Profile/>}/>
         <Route path='/print_card' element={<Print_card/>}/>

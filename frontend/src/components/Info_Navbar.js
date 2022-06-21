@@ -1,16 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { Tabs, Tab, AppBar,Box } from "@material-ui/core";
-import { Route, BrowserRouter, Switch, Link } from "react-router-dom";
+import { Link,useNavigate } from 'react-router-dom';
 import './Info_Navbar.css';
+import { Button } from './Button';
+import swal from '@sweetalert/with-react'
 
 
 function Info_Navbar(props) {
-
+  const navigate = useNavigate();
   const [value, setValue] = React.useState(0)
 
   const handleChange = (event, newValue) =>{
     setValue(newValue) 
   }
+
+  const vaccineStaffButton = () =>{
+
+    navigate('/vaccine_staff_add_vaccine')
+
+  }
+
 
    
   if(props.userCat === "vaccineStaff"){
@@ -19,7 +28,8 @@ function Info_Navbar(props) {
         return(
           <>
            <div>
-             <h1>Vaccine History</h1>
+             <h1><Button onClick={vaccineStaffButton}> Add New Vaccine </Button> <br/> Vaccine History  </h1>
+             
            </div>
           </>
         );
