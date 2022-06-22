@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.2",
     "@sweetalert/with-react": "^0.1.1",
     "bcryptjs": "^2.4.3",
     "bigchaindb-driver": "^4.3.0",
@@ -17,7 +18,9 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.5",
     "nodemon": "^2.0.16",
-    "qrcode.react": "^3.0.2"
+    "qrcode.react": "^3.0.2",
+    "react-redux": "^8.0.2",
+    "redux": "^4.2.0"
   },
   "repository": {
     "type": "git",

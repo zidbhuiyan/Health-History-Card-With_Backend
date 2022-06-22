@@ -42,13 +42,13 @@ const Login_Form_Client = (props) => {
                 user: res.data.user,
               }
             });
-
-            const storeobj = {
-                type: "Client",
-                login: true
-            }
             
-            props.updateUser(storeobj)
+            const storeobj = {
+              type: "Client",
+              login: true
+          }
+          
+          props.updateUser(storeobj)
          
       }
       else if(result == "passwordisIncorrect"){
