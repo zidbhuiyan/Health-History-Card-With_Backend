@@ -37,19 +37,10 @@ function Login_Form_Vaccine_Staff(props) {
       result = (res.data.message)
       
       if(result == "logindone"){
-
-        const storeobj = {
-          type: "VaccineStaff",
-          login: true
-      }
-
-      props.updateUser(storeobj)
        
-        navigate("/vaccine_staff_home",{
-          state:{
-            user: res.data.user,
-          }
-        });
+        navigate("/vaccine_staff_home");
+        props.updateUser(res.data.user);
+
       }
 
       else if(result == "passwordisIncorrect"){

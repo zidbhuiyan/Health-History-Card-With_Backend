@@ -58,12 +58,12 @@ function Navbar(props) {
       return(
         <>
        <li className='nav-item'>
-                 <Link  to='/profile'  className='nav-links' state={{  user: props.user }} onClick={closeMobileMenu}>
+                 <Link  to='/profile'  className='nav-links' onClick={closeMobileMenu}>
                    Profile
                  </Link>
                </li>
                <li className='nav-item'>
-                 <Link  to='/print_card' className='nav-links' state={{  user: props.user }} onClick={closeMobileMenu}>
+                 <Link  to='/print_card' className='nav-links' onClick={closeMobileMenu}>
                    Print Card
                  </Link>
                </li>
@@ -152,8 +152,8 @@ function Navbar(props) {
   const closeMobileMenu = () => setClick(false);
 
   const logout = () =>{
-    localStorage.clear("Myuser")
-    navigate("/");
+    sessionStorage.setItem("Myuser", null)
+    window.location.reload(false);
   }
 
  

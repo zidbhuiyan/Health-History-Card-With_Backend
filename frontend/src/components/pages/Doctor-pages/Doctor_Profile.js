@@ -2,18 +2,17 @@ import React from 'react';
 import '../../../App.css';
 import Footer from '../../Footer';
 import Doctor_Navbar from './Doctor_Navbar';
-import {useLocation} from 'react-router-dom';
 
 function Doctor_Profile(props) {
 
-  const location = useLocation();
+  console.log(props.user);
 
     return (
       <>
 
 <div className='bgdp'>
-        <Doctor_Navbar
-        user = {location.state.user}/>
+
+        <Doctor_Navbar/>
 
 <div class="container">
   
@@ -23,37 +22,37 @@ function Doctor_Profile(props) {
         <div class="user-details">
           <div class="input-box">
             <span class="details">First Name</span>
-            <input type="text" value = {location.state.user.Dfirstname} disabled/>
+            <input type="text" value={props.user.Dfirstname}  disabled/>
           </div>
           <div class="input-box">
             <span class="details">Last name</span>
-            <input type="text" value = {location.state.user.Dlastname} disabled/>
+            <input type="text" value={props.user.Dlastname}  disabled/>
           </div>
           <div class="input-box">
             <span class="details">Doctor Register ID</span>
-            <input type="text" value = {location.state.user.Docregid} disabled/>
+            <input type="text" value={props.user.Docregid}  disabled/>
           </div>
           <div class="input-box">
             <span class="details">NID</span>
-            <input type="text" value = {location.state.user.Dnid} disabled/>
+            <input type="text" value={props.user.Dnid} disabled/>
           </div>
           <div class="input-box">
             <span class="details">Date of Birth(YYYY/MM/DD)</span>
-            <input type="text" value = {location.state.user.Ddateofbirth} disabled/>
+            <input type="text" value={props.user.Ddateofbirth}  disabled/>
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
-            <input type="text" value = {location.state.user.Dphonenumber} disabled/>
+            <input type="text" value={props.user.Dphonenumber} disabled/>
           </div>
 
           <div class="input-box">
             <span class="details">Hospital Name</span>
-            <input type="text" value = {location.state.user.hospitalname} disabled/>
+            <input type="text" value={props.user.hospitalname} disabled/>
           </div>
          
           <div class="input-box">
             <span class="details">Gender</span>
-            <input type="text" value = {location.state.user.Dgender} disabled/>
+            <input type="text" value={props.user.Dgender}  disabled/>
           </div>
         </div>
       </form>

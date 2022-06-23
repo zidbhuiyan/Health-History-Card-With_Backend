@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '../../Button';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import '../../Navbar.css';
 
 function Doctor_Navbar(props) {
-
-  const navigate = useNavigate();
 
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
@@ -28,18 +26,15 @@ function Doctor_Navbar(props) {
   window.addEventListener('resize', showButton);
 
   function logoutClick(event) {
-    navigate("/",{
-      state:{
-        user: null,
-      }
-    });
+    sessionStorage.setItem("Myuser", null)
+    window.location.reload(false);
   }
 
   return (
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
-          <Link to='/doctor_home' state={{  user: props.user }} className='navbar-logo' onClick={closeMobileMenu}>
+          <Link to='/doctor_home' className='navbar-logo' onClick={closeMobileMenu}>
 
           <i class="fa fa-id-card" aria-hidden="true"></i>
             Medical History Card 
@@ -58,7 +53,6 @@ function Doctor_Navbar(props) {
               <Link
                 to='/doctor_home'
                 className='nav-links'
-                state={{  user: props.user }}
                 onClick={closeMobileMenu}
               > 
                <i class="fa fa-search" aria-hidden="true"/>
@@ -70,7 +64,6 @@ function Doctor_Navbar(props) {
               <Link
                 to='/doctor_profile'
                 className='nav-links'
-                state={{  user: props.user }}
                 onClick={closeMobileMenu}
               > 
                <i class="fa fa-user" aria-hidden="true"></i>

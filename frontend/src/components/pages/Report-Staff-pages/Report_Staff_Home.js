@@ -4,20 +4,16 @@ import Footer from '../../Footer';
 import SearchBar from '../../SearchBar';
 import Report_Staff_Navbar from './Report_Staff_Navbar';
 import'./Report_Staff_Home.css'
-import {useLocation} from 'react-router-dom';
 
-function Report_Staff_Home() {
-
-  const location = useLocation();
+function Report_Staff_Home(props) {
   
   return (
     <>
     <div className='bgRepStf'>
-      <Report_Staff_Navbar
-       user = {location.state.user}/>
+      <Report_Staff_Navbar/>
       <SearchBar
       userCat = "reportStaff"
-      userCatInfo = {location.state.user}/>
+      userCatInfo = {props.user}/>
       <Footer/>
     </div>
     </>

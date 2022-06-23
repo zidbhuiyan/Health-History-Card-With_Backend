@@ -24,11 +24,16 @@ function Vaccine_Staff_Navbar(props) {
 
   window.addEventListener('resize', showButton);
 
+  function logoutClick(event) {
+    sessionStorage.setItem("Myuser", null)
+    window.location.reload(false);
+  }
+
   return (
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
-          <Link to='/vaccine_staff_home' state={{  user: props.user }} className='navbar-logo' onClick={closeMobileMenu}>
+          <Link to='/vaccine_staff_home' className='navbar-logo' onClick={closeMobileMenu}>
 
           <i class="fa fa-id-card" aria-hidden="true"></i>
             Medical History Card 
@@ -47,7 +52,7 @@ function Vaccine_Staff_Navbar(props) {
               <Link
                 to='/vaccine_staff_home'
                 className='nav-links'
-                state={{  user: props.user }}
+              
                 onClick={closeMobileMenu}
               > 
                <i class="fa fa-search" aria-hidden="true"/>
@@ -59,7 +64,7 @@ function Vaccine_Staff_Navbar(props) {
               <Link
                 to='/vaccine_staff_profile'
                 className='nav-links'
-                state={{  user: props.user }}
+              
                 onClick={closeMobileMenu}
               > 
                <i class="fa fa-user" aria-hidden="true"></i>
@@ -68,13 +73,7 @@ function Vaccine_Staff_Navbar(props) {
             </li>
 
             <li>
-              <Link
-                to='/'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-               <Button buttonStyle='btn--outline'>Logout</Button>
-              </Link>
+               <Button onClick={logoutClick} buttonStyle='btn--outline'>Logout</Button>
             </li>
             
           </ul>

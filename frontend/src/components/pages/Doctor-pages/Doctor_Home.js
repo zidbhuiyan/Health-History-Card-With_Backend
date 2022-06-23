@@ -4,20 +4,18 @@ import Footer from '../../Footer';
 import SearchBar from '../../SearchBar';
 import Doctor_Navbar from './Doctor_Navbar';
 import'./Doctor_Home.css'
-import {useLocation} from 'react-router-dom';
 
 function Doctor_Home( props ) {
 
-  const location = useLocation();
+  console.log(props.user);
   
   return (
     <>
     <div className='bgdoctor'>
-      <Doctor_Navbar
-      user = {location.state.user}/>
+      <Doctor_Navbar/>
       <SearchBar
       userCat = "doctor"
-      userCatInfo = {location.state.user}/>
+      userCatInfo = {props.user}/>
       <Footer/>
     </div>
     </>

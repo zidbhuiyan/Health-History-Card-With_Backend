@@ -4,12 +4,9 @@ import '../../../App.css';
 import Footer from '../../Footer';
 import Navbar from '../../Navbar';
 import './print_card.css'
-import {useLocation} from 'react-router-dom';
 import {QRCodeSVG} from 'qrcode.react';
 
-const Print_card = () => {
-
-  const location = useLocation()
+const Print_card = (props) => {
 
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
@@ -22,7 +19,6 @@ const Print_card = () => {
       <div class ="bgpc">
         <Navbar
         NavPage='profile'
-        user = {location.state.user}
         page = 'print_card'/>
 
 <div class="container">
@@ -41,13 +37,13 @@ const Print_card = () => {
                     </div>
                     <div class="bottom">
                         <p class="left">Health ID:</p>
-                        <p class="left_desi">{location.state.user.hid}</p>
+                        <p class="left_desi">{props.user.hid}</p>
                         <p class="left">Name:</p>
-                        <p class="left_desi">{location.state.user.firstname} {location.state.user.lastname}</p>
+                        <p class="left_desi">{props.user.firstname} {props.user.lastname}</p>
                         <p class="right">Gender:</p>
-                        <p class="right_desi">{location.state.user.gender}</p>
+                        <p class="right_desi">{props.user.gender}</p>
                         <p class="right">Date of Birth:</p>
-                        <p class="right_desi">{location.state.user.dateofbirth}</p>
+                        <p class="right_desi">{props.user.dateofbirth}</p>
                     </div>
                 </div> 
 
@@ -63,18 +59,18 @@ const Print_card = () => {
                              bgColor={"#ffffff"}
                              fgColor={"#000000"}
                              level={"L"} 
-                             value= {location.state.user.hid} />
+                             value= {props.user.hid} />
                   </div>
                         
                     </div>
                         <p class="left">Phone Number:</p>
-                        <p class="left_desi">{location.state.user.phonenumber}</p>
+                        <p class="left_desi">{props.user.phonenumber}</p>
                         <p class="left">Blood Group:</p>
                         <p class="left_desi">---</p>
                         <p class="left">Diseases:</p>
                         <p class="left_desi">----</p>
                         <p class="center_desi"><b>Emergency Number</b></p>
-                        <p class="center_desi">{location.state.user.phonenumber}</p>
+                        <p class="center_desi">{props.user.phonenumber}</p>
                     </div>
                 </div>
       </div>

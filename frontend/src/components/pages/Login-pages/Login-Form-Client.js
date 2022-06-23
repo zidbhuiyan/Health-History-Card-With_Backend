@@ -37,18 +37,9 @@ const Login_Form_Client = (props) => {
 
       if(result == "logindone"){
        
-            navigate("/profile",{
-              state:{
-                user: res.data.user,
-              }
-            });
-            
-            const storeobj = {
-              type: "Client",
-              login: true
-          }
+            navigate("/profile");
           
-          props.updateUser(storeobj)
+          props.updateUser(res.data.user)
          
       }
       else if(result == "passwordisIncorrect"){
