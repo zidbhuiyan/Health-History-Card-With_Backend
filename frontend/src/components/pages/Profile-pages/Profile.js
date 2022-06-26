@@ -3,7 +3,7 @@ import '../../../App.css';
 import './Profile.css'
 import Footer from '../../Footer';
 import Info_Navbar from '../../Info_Navbar';
-import Navbar from '../../Navbar';
+import Navbar from '../../Navbar'; 
 
 
 const Profile = (props) => {
@@ -49,10 +49,18 @@ const Profile = (props) => {
             <span class="details">Phone Number</span>
             <input type="text" name="phonenumber" value = {props.user.phonenumber} disabled/>
           </div>
-          
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" name="email" value = {props.user.email} disabled/>
+          </div>
           <div class="input-box">
             <span class="details">Gender</span>
             <input type="text" name="gender" value = {props.user.gender} disabled/>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Blood Group</span>
+            <input type="text" name="bloodgroup" value = {props.user.bloodgroup} disabled/>
           </div>
         </div>
       </form>

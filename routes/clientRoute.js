@@ -9,6 +9,8 @@ router.route("/create1").post((req, res) =>{
     const birthid = req.body.birthid;
     const nid = req.body.nid;
     const hid = req.body.hid;
+    const email = req.body.email;
+    const bloodgroup = req.body.bloodgroup;
     const dateofbirth = req.body.dateofbirth;
     const phonenumber = req.body.phonenumber;
     const fathersname = req.body.fathersname;
@@ -46,6 +48,8 @@ router.route("/create1").post((req, res) =>{
                             birthid,
                             nid,
                             hid,
+                            email,
+                            bloodgroup,
                             dateofbirth,
                             phonenumber,
                             fathersname,

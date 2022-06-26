@@ -40,8 +40,6 @@ function App() {
     setLoginUser(loginUser)
   }
 
-  console.log(loginUser);
-
   let path =  ''
 
    if(loginUser && loginUser._id){
@@ -58,10 +56,6 @@ function App() {
       path = '/vaccine_staff_home'
     }
    }
-
-
-
-  console.log(path);
 
 
   return (

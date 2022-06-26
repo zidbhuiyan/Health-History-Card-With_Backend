@@ -61,7 +61,7 @@ function SearchBar(props) {
       else{
         swal({
           title: "User Not Found!",
-          text: "Please, check Health ID again",
+          text: "Please, Check Health ID again",
           icon: "warning",
           button: "Okay",
         });

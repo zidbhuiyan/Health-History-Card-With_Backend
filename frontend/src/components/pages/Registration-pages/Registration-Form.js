@@ -15,6 +15,8 @@ function Registration_Form() {
     birthid: '',
     nid: '',
     hid:'',
+    email:'',
+    bloodgroup:'',
     dateofbirth: '',
     phonenumber: '',
     fathersname: '',
@@ -74,6 +76,8 @@ function Registration_Form() {
         birthid: user.birthid,
         nid: user.nid,
         hid: user.hid,
+        email:user.email,
+        bloodgroup:user.bloodgroup,
         dateofbirth: user.dateofbirth,
         phonenumber: user.phonenumber,
         fathersname: user.fathersname,
@@ -333,22 +337,47 @@ function Registration_Form() {
             <input type="password" name="confirmpassword" value={user.confirmpassword} placeholder="Confirm password" id="confirmpassword" onChange={ handleChange } required/>
             <p class = "error">{formErrors.confirmpassword}</p>
           </div>
-          <div class="input-box">
-            <span class="details">Gender</span>
-            <select name="gender" value={user.gender} id="gender" onChange={ handleChange }>
-            <option value="" disabled selected>Select Gender </option>
-	          <option value="male">Male</option>
-	          <option value="female">Female</option>
-          	<option value="other">Prefer not to say</option>
-            </select>
-            <p class = "error">{formErrors.gender}</p>
-          </div>
 
           <div class="input-box">
             <span class="details">Emergency Phone Number</span>
             <input type="text" name="emergphonenumber" value={user.emergphonenumber} placeholder="Enter emergency phone number" id="emergphonenumber" onChange={ handleChange } required/>
             <p class = "error">{formErrors.emergphonenumber}</p>
           </div>
+
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" name="email" value={user.email} placeholder="Enter Email" id="email" onChange={ handleChange } required/>
+            <p class = "error">{formErrors.email}</p>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Gender</span>
+            <select name="gender" value={user.gender} id="gender" onChange={ handleChange }>
+            <option value="" disabled selected>Select Gender </option>
+	          <option value="Male">Male</option>
+	          <option value="Female">Female</option>
+          	<option value="Other">Prefer not to say</option>
+            </select>
+            <p class = "error">{formErrors.gender}</p>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Blood Group</span>
+            <select name="bloodgroup" value={user.bloodgroup} id="bloodgroup" onChange={ handleChange }>
+            <option value="" disabled selected>Select Blood Group </option>
+	          <option value="A(+ve)">A(+ve)</option>
+	          <option value="B(+ve)">B(+ve)</option>
+          	<option value="A(-ve)">A(-ve)</option>
+	          <option value="B(-ve)">B(-ve)</option>
+            <option value="AB(+ve)">AB(+ve)</option>
+	          <option value="AB(-ve)">AB(-ve)</option>
+          	<option value="O(+ve)">O(-ve)</option>
+	          <option value="O(-ve)">O(-ve)</option>
+            </select>
+            <p class = "error">{formErrors.bloodgroup}</p>
+          </div>
+
+          
 
         </div>
      
